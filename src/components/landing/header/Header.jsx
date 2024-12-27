@@ -18,8 +18,8 @@ const Header = () => {
   };
 
   return (
-    <div className="w-full flex justify-center my-2">
-      <nav className="bg-white/30 text-lg shadow-md md:w-[95%] w-full md:rounded-xl md:top-2 z-50 overflow-x-hidden">
+    <div className="w-full flex justify-center md:my-2">
+      <nav className="md:bg-white/40 bg-gradient-to-t from-gray-700/50 to-blue-gray-800/50 text-lg shadow-md md:w-[95%] w-full md:rounded-xl md:top-2 z-50 overflow-x-hidden">
         <div className="max-w-screen-xl mx-auto flex items-center justify-between px-4 py-3 md:px-6 lg:px-8">
           {/* Logo */}
           <div className="text-white font-bold">DashForge</div>
@@ -28,7 +28,7 @@ const Header = () => {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-[#255db1] focus:outline-none"
+              className="text-[#ffffff] focus:outline-none"
               aria-label="Toggle navigation menu"
             >
               <svg
