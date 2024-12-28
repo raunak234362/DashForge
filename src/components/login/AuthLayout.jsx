@@ -14,26 +14,32 @@ const AuthLayout = () => {
   const { isLoaded, signIn } = useSignIn();
 
   const onSubmit = async (data) => {
-    if (!isLoaded) return; // Ensure Clerk is loaded
-
-    const { gmail, password } = data;
-
+  if (!isLoaded) return; 
+  
+    const { emailAddress, password } = data;
+  
+    const identifier = emailAddress; 
+  
     try {
       const signInAttempt = await signIn.create({
-        identifier: gmail, // Email address or username
+        identifier,  // Using the correct identifier (emailAddress or username)
         password,
       });
-
-      console.log(signInAttempt)
+  
       if (signInAttempt.status === "complete") {
         console.log("Sign in successful!");
+        // Redirect to dashboard or home page
       } else {
         console.log("Additional steps required:", signInAttempt);
       }
     } catch (error) {
-      console.error("Error during sign-in:", error.errors);
+      console.error("Error during sign-in:", error.message);
+      if (error.errors) {
+        error.errors.forEach((err) => console.error(err.message)); // Detailed error messages
+      }
     }
   };
+  
 
   return (
     <div>
@@ -66,12 +72,12 @@ const AuthLayout = () => {
                       label="Mail ID:"
                       placeholder="Mail ID"
                       type="email"
-                      {...register("gmail", {
-                        required: "Mail ID is required",
+                      {...register("emailAddress", {
+                        required: "Mail ID is required", // Changed to 'emailAddress'
                       })}
                     />
-                    {errors.gmail && (
-                      <p className="text-red-500">{errors.gmail.message}</p>
+                    {errors.emailAddress && (
+                      <p className="text-red-500">{errors.emailAddress.message}</p> // Updated to 'emailAddress'
                     )}
                   </div>
                   <div className="space-y-2">
