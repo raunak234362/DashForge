@@ -4,6 +4,13 @@ import "./index.css";
 import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { DashboardLayout, Layout, Login } from "./components/index.js";
+import { ClerkProvider } from "@clerk/clerk-react";
+
+const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
+
+if (!PUBLISHABLE_KEY) {
+  throw new Error("Missing Publishable Key");
+}
 
 const router = createBrowserRouter([
   {
@@ -21,10 +28,12 @@ const router = createBrowserRouter([
       {
         path: "login",
         element: <Login />,
-        children:[{
-          path: "signup",
-          element: <Login />,
-        }]
+        children: [
+          {
+            path: "signup",
+            element: <Login />,
+          },
+        ],
       },
     ],
   },
@@ -32,6 +41,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/">
+      <RouterProvider router={router} />
+    </ClerkProvider>
   </StrictMode>
 );
