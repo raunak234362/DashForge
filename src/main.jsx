@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Layout } from "./components/index.js";
+import { DashboardLayout, Layout } from "./components/index.js";
 
 const router = createBrowserRouter([
   {
@@ -12,8 +12,13 @@ const router = createBrowserRouter([
     children: [
       {
         path: "",
-        element: <Layout/>,
-      }
+        element: <Layout />,
+      },
+      {
+        path: "dashboard",
+        element: <DashboardLayout />,
+        children: [{}],
+      },
     ],
   },
 ]);
