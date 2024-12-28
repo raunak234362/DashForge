@@ -70,14 +70,14 @@ const Sidebar = () => {
 
           <li className="w-full">
             <NavLink
-              to="profile"
+              to="generate-Data"
               className={({ isActive }) =>
                 isActive
                   ? "flex justify-center items-center text-white bg-teal-400 rounded-md w-full  delay-150 transition-all ease-in-out"
                   : "text-black hover:text-white hover:flex hover:justify-center hover:items-center hover:bg-teal-200  rounded-md"
               }
             >
-              <div>Profile</div>
+              <div>Data</div>
             </NavLink>
           </li>
           <li className="w-full">
