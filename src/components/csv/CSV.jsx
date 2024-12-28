@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Button, Input } from "../index";
 import { useForm } from "react-hook-form";
 import Service from "../../config/Service";
+import { toast } from "react-toastify";
 
 const AddCSV = () => {
   const [formData, setFormData] = useState("");
@@ -31,7 +32,7 @@ const AddCSV = () => {
       }
       const data = await Service.csvUpload(csvData);
       console.log(data);
-      alert("Successfully added users from CSV");
+      toast.success("Successfully added users from CSV");
       return data;
     } catch (error) {
       console.error("Error adding users from CSV", error);
