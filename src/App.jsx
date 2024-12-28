@@ -7,8 +7,6 @@ function App() {
   return (
     <Provider store={store}>
       <div className="min-h-screen">
-        <header className="bg-gray-100 shadow-md flex justify-between items-center">
-        </header>
         <main>
           <Outlet />
         </main>

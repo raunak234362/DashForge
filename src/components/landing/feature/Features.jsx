@@ -45,8 +45,8 @@ const Features = () => {
   
     return (
       <>
-        <section className="md:h-screen h-full px-5 mt-6 md:mt-0">
-          <div className="font-markazi font-bold text-center text-white">
+        <section className="md:h-screen h-full px-5 mt-10 md:space-y-16 md:mt-0">
+          <div className="font-markazi font-bold space-y-2 text-center text-white">
             <p className="text-3xl md:text-4xl xl:text-6xl">
               Powerful Features for Everyone
             </p>
@@ -59,7 +59,7 @@ const Features = () => {
             {features.map((card, index) => (
               <div
                 key={index}
-                className={`bg-black/10 border-[1px] ${card.borderColour} shadow-lg ${card.shadowColour} flex flex-col justify-center text-center items-center p-5 gap-5 rounded-md text-white`}
+                className={`bg-black/10 border-[1px] ${card.borderColour} shadow-lg ${card.shadowColour} flex flex-col justify-center text-left items-left p-5 gap-5 rounded-md text-white`}
               >
                 <div className="text-2xl">{card.icon}</div>
                 <div className="text-xl md:text-2xl">{card.title}</div>
