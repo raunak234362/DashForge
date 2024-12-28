@@ -40,7 +40,7 @@ const AddCSV = () => {
   };
 
   return (
-    <div className="rounded-lg shadow-lg shadow-black/15 p-8 mt-8">
+    <div className="rounded-lg shadow-lg bg-white/50 shadow-black/15 p-8 mt-8">
       <form onSubmit={handleSubmit(handleCSV)}>
         <input
           type="file"
