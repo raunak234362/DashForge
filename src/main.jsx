@@ -4,7 +4,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { AuthLayout, DashboardLayout, GenerateData, Layout, Login, Signup } from "./components/index.js";
+import { AuthLayout, DashboardLayout, GenerateData, Layout, Login, MainDashboard, Signup } from "./components/index.js";
 import { ClerkProvider } from "@clerk/clerk-react";
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
@@ -26,6 +26,10 @@ const router = createBrowserRouter([
         path: "dashboard",
         element: <DashboardLayout />,
         children:[
+          {
+            path:"",
+            element:<MainDashboard/>
+          },
           {
             path:"generate-Data",
             element:<GenerateData/>
