@@ -1,3 +1,5 @@
+import {Button}
+
 const Hero = () => {
   return (
     <>
@@ -11,6 +13,9 @@ const Hero = () => {
         <div className="md:text-3xl text-xl text-wrap font-iceland text-center text-gray-500">
           Transform your data into insights with AI-powered dashboard
           generation. No coding required.
+        </div>
+        <div>
+          <Button></Button>
         </div>
       </section>
     </>
