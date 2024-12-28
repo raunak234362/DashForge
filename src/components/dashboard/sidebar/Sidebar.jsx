@@ -52,7 +52,7 @@ const Sidebar = () => {
 
   const userType = sessionStorage.getItem("userType");
   return (
-    <div className="flex flex-col justify-between md:h-[88vh] h-[88vh] w-64 bg-white/70 md:border-4 text-black md:rounded-xl rounded-lg">
+    <div className="flex flex-col justify-between h-full w-60 bg-white/30 md:border-2 text-black md:rounded-xl rounded-lg">
       <nav className="p-5">
         <ul className="flex flex-col gap-5">
           <li>
@@ -68,6 +68,18 @@ const Sidebar = () => {
             </NavLink>
           </li>
 
+          <li className="w-full">
+            <NavLink
+              to="profile"
+              className={({ isActive }) =>
+                isActive
+                  ? "flex justify-center items-center text-white bg-teal-400 rounded-md w-full  delay-150 transition-all ease-in-out"
+                  : "text-black hover:text-white hover:flex hover:justify-center hover:items-center hover:bg-teal-200  rounded-md"
+              }
+            >
+              <div>Profile</div>
+            </NavLink>
+          </li>
           <li className="w-full">
             <NavLink
               to="profile"
