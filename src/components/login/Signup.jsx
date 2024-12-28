@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useForm } from "react-hook-form";
 import { Input, Button } from "../index";
+import { useSignUp } from "@clerk/clerk-react";
 // import AuthService from "../../config/AuthService";
 const Signup = () => {
   const {
@@ -9,7 +10,18 @@ const Signup = () => {
     formState: { errors },
   } = useForm();
 
+  const { isLoaded, signUp, setActive } = useSignUp();
+
   const onSubmit = async (data) => {
+    if (!isLoaded) return; // Ensure Clerk is loaded before making calls
+
+    try {
+      const signupDetail = await signUp.create({ data });
+      await signupDetail.prepareEmailAddressVerification();
+      console.log("Sign-up successful! Please verify your email.");
+    } catch (error) {
+      console.error("Error during sign-up:", error.errors);
+    }
     // const response = await AuthService.register(data);
     // console.log(response);
     console.log(data);
