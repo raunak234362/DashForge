@@ -101,7 +101,7 @@ const Login = () => {
               Don't have an account?{" "}
               <Link
                 to="/signup"
-                className="text-indigo-600 hover:text-indigo-500 font-semibold"
+                className="text-indigo-600 hover:text-indigo-500 px-2 py-3 font-semibold"
               >
                 Sign up
               </Link>
