@@ -24,7 +24,7 @@ const Hero = () => {
 
   return (
     <>
-      <section className="h-screen px-5">
+      <section className="h-full md:h-screen px-5">
         <div className="text-5xl md:text-6xl xl:text-8xl font-markazi font-bold text-center text-white">
           <p>Create Custom Dashboards</p>
           <p className="text-transparent bg-clip-text bg-gradient-to-t from-cyan-400 to-cyan-700">
@@ -50,7 +50,7 @@ const Hero = () => {
               className="bg-black/10 border-[1px] flex flex-col justify-center text-center items-center px-5 py-5 gap-4 rounded-md text-white"
             >
               <div className="text-2xl">{card.icon}</div>
-              <div className="text-2xl">{card.title}</div>
+              <div className="text-xl md:text-2xl">{card.title}</div>
               <div className="text-base">{card.description}</div>
             </div>
           ))}

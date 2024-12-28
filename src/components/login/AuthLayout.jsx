@@ -1,8 +1,8 @@
-import React from "react";
+
 import { BarChart3 } from "lucide-react";
 import { Input, Button, DashboardLayout } from "../index";
 import { useForm } from "react-hook-form";
-import { SignedIn, SignedOut, useSignIn, UserButton } from "@clerk/clerk-react";
+import { SignedIn, SignedOut, useSignIn } from "@clerk/clerk-react";
 
 const AuthLayout = () => {
   const {
