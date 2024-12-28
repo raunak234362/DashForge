@@ -40,9 +40,21 @@ const Hero = () => {
           <div className=" bg-cyan-800 px-3 py-2 rounded-md text-white text-xl font-bebas">
             <Link to="#">Watch Demo</Link>
           </div>
-          <div></div>
         </div>
-        
+          <div className="flex flex-col md:flex-row justify-center gap-5 mt-10">
+            {cardData.map((card, index) => (
+              <div
+                key={index}
+                className="bg-black/10 border-[1px] p-5 gap-4 rounded-md text-white"
+              >
+                <div className="text-3xl">
+                  <i className={card.icon}></i>
+                </div>
+                <div className="text-xl font-bebas">{card.title}</div>
+                <div className="text-sm">{card.description}</div>
+              </div>
+            ))}
+          </div>
       </section>
     </>
   );
