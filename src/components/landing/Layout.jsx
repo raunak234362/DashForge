@@ -2,7 +2,9 @@ import { useCallback, useState } from "react";
 import Header from "./header/Header";
 import Hero from "./hero/Hero";
 import Features from "./feature/Features";
-
+import { HowItWorks } from "./howItWorks/HowItWorks";
+import { AIDashboardSection } from "./aiDashboard/AiDashboardSection";
+import Footer from "./footer/Footer"
 const Layout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -22,6 +24,15 @@ const Layout = () => {
         <div>
           <Features />
         </div>
+        <div>
+          <HowItWorks />
+        </div>
+        <div>
+          <AIDashboardSection/>
+        </div>
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );

@@ -17,9 +17,25 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const header = document.querySelector("nav");
+      if (window.scrollY > 50) {
+        header.style.opacity = "0.9";
+      } else {
+        header.style.opacity = "1";
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="w-full flex justify-center md:py-2">
-      <nav className="md:bg-white/40 bg-gradient-to-t from-gray-700/50 to-blue-gray-800/50 text-lg shadow-md md:w-[95%] w-full md:rounded-xl md:top-2 z-50 overflow-x-hidden">
+      <nav className="md:bg-transparent bg-gradient-to-t from-gray-700/50 to-blue-gray-800/50 text-lg shadow-md md:w-[95%] w-full md:rounded-xl md:top-2 z-50 overflow-x-hidden">
         <div className="max-w-screen-xl mx-auto flex items-center justify-between px-4 py-3 md:px-6 lg:px-8">
           {/* Logo */}
           <div className="text-white font-bold">DashForge</div>
@@ -54,12 +70,12 @@ const Header = () => {
               isMenuOpen ? "block" : "hidden"
             }`}
           >
-            <ul className="flex flex-col md:flex-row text-center md:space-x-6 text-lg">
+            <ul className="flex flex-col md:bg-transparent md:flex-row bg-blue-gray-900 text-center md:space-x-10 text-lg">
               {isLoggedIn && (
                 <li className="py-2 md:py-0">
                   <NavLink
                     to="/registerCompany"
-                    className="block text-white hover:text-[#EE0A73] transition-colors duration-200 tracking-wide"
+                    className="block text-white hover:text-teal-800 transition-colors duration-200 tracking-wide"
                     style={{
                       textShadow: "2px 2px 2px #228EFD",
                     }}
@@ -72,7 +88,7 @@ const Header = () => {
                 <li className="py-2 md:py-0">
                   <NavLink
                     to="/profile"
-                    className="block text-[12px] md:text-[6px] lg:text-[10px] xl:text-[14px] text-white hover:text-[#EE0A73] transition-colors duration-200 tracking-wide"
+                    className="block text-xl text-white hover:text-teal-800 transition-colors duration-200 tracking-wide"
                     style={{
                       textShadow: "2px 2px 2px #228EFD",
                     }}
@@ -81,12 +97,11 @@ const Header = () => {
                   </NavLink>
                 </li>
               )}
-
-              {isLoggedIn ? (
+              {isLoggedIn && (
                 <li className="py-2 md:py-0">
                   <NavLink
                     to="/dashboard"
-                    className="block text-[12px] md:text-[6px] lg:text-[10px] xl:text-[14px] text-white hover:text-[#EE0A73] transition-colors duration-200 tracking-wide"
+                    className="block text-xl text-white hover:text-teal-800 transition-colors duration-200 tracking-wide"
                     style={{
                       textShadow: "2px 2px 2px #228EFD",
                     }}
@@ -94,19 +109,32 @@ const Header = () => {
                     Dashboard
                   </NavLink>
                 </li>
-              ) : (
-                <li className="py-2 md:py-0">
-                  <NavLink
-                    to="/login"
-                    className="block text-[12px] md:text-[6px] lg:text-[10px] xl:text-[14px] text-white hover:text-[#EE0A73] transition-colors duration-200 tracking-wide"
-                    style={{
-                      textShadow: "2px 2px 2px #228EFD",
-                    }}
-                  >
-                    Login
-                  </NavLink>
-                </li>
               )}
+
+              <li className="py-2 md:py-0">
+                <NavLink
+                  to="/Home"
+                  className="block text-xl text-white hover:text-teal-800 transition-colors duration-200 tracking-wide"
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li className="py-2 md:py-0">
+                <NavLink
+                  to="/Home"
+                  className="block text-xl text-white hover:text-teal-800 transition-colors duration-200 tracking-wide"
+                >
+                  About
+                </NavLink>
+              </li>
+              <li className="py-2 md:py-0">
+                <NavLink
+                  to="/Home"
+                  className="block text-xl text-white hover:text-teal-800 transition-colors duration-200 tracking-wide"
+                >
+                  Features
+                </NavLink>
+              </li>
             </ul>
           </div>
         </div>
