@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { Sidebar } from "../../index";
+import { AddCSV, Sidebar } from "../../index";
 import { Outlet } from "react-router-dom";
 
 const DashboardLayout = () => {
@@ -44,6 +44,9 @@ const DashboardLayout = () => {
         <main
           className="flex-grow overflow-y-auto p-4 transition-all duration-300"
         >
+          <div>
+          <AddCSV/>
+          </div>
           <Outlet />
         </main>
       </div>

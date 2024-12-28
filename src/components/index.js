@@ -11,5 +11,6 @@ import AuthLayout from "./login/AuthLayout";
 //dashboard
 import DashboardLayout from "./dashboard/layout/DashboardLayout";
 import Sidebar from "./dashboard/sidebar/Sidebar";
+import AddCSV from "./csv/CSV";
 
-export { Layout, Button, Input, Select, DashboardLayout, Sidebar, Login, Signup,AuthLayout };
+export { Layout, Button, Input, Select, DashboardLayout, Sidebar, Login, Signup,AuthLayout, AddCSV };
