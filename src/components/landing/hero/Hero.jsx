@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Link } from "react-router-dom";
 
 const Hero = () => {
@@ -34,7 +35,7 @@ const Hero = () => {
         </div>
         <div className="flex justify-center mt-10 gap-5">
           <div className=" bg-cyan-800 px-3 py-2 rounded-md text-white text-xl font-bebas">
-            <Link to="/dashboard">Get Started</Link>
+            <Link to="/login">Get Started</Link>
           </div>
           <div className=" bg-cyan-800 px-3 py-2 rounded-md text-white text-xl font-bebas">
             <Link to="#">Watch Demo</Link>

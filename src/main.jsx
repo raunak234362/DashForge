@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { DashboardLayout, Layout } from "./components/index.js";
+import { DashboardLayout, Layout, Login } from "./components/index.js";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +17,14 @@ const router = createBrowserRouter([
       {
         path: "dashboard",
         element: <DashboardLayout />,
-        children: [{}],
+      },
+      {
+        path: "login",
+        element: <Login />,
+        children:[{
+          path: "signup",
+          element: <Login />,
+        }]
       },
     ],
   },
