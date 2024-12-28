@@ -14,11 +14,20 @@ const Sidebar = () => {
   const [currentUser, setCurrentUser] = useState();
 
 
+  const clearCookies = () => {
+    const cookies = document.cookie.split("; ");
+    for (const cookie of cookies) {
+      const eqPos = cookie.indexOf("=");
+      const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+      document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    }
+  };
+  
   const fetchLogout = async () => {
     try {
+      clearCookies();
       // const response = await AuthService.logout(token);
-      sessionStorage.removeItem("userType");
-      sessionStorage.removeItem("token");
+      
     //   dispatch(logoutAction());
       navigate("/");
     } catch (error) {

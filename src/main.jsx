@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { DashboardLayout, Layout, Login } from "./components/index.js";
+import { AuthLayout, DashboardLayout, Layout, Login, Signup } from "./components/index.js";
 import { ClerkProvider } from "@clerk/clerk-react";
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
       },
       {
         path: "login",
-        element: <Login />,
+        element: <AuthLayout />,
       },
       {
         path: "signup",
