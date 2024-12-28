@@ -2,7 +2,7 @@
 import { useForm } from "react-hook-form";
 import { Input, Button } from "../index";
 import { useSignUp } from "@clerk/clerk-react";
-// import AuthService from "../../config/AuthService";
+
 const Signup = () => {
   const {
     register,
@@ -10,22 +10,27 @@ const Signup = () => {
     formState: { errors },
   } = useForm();
 
-  const { isLoaded, signUp, setActive } = useSignUp();
+  const { isLoaded, signUp } = useSignUp();
 
   const onSubmit = async (data) => {
     if (!isLoaded) return; // Ensure Clerk is loaded before making calls
 
     try {
-      const signupDetail = await signUp.create({ data });
-      await signupDetail.prepareEmailAddressVerification();
-      console.log("Sign-up successful! Please verify your email.");
+      // Create a new user with Clerk
+      const signUpAttempt = await signUp.create(data);
+      console.log("signUpAttempt", signUpAttempt);
+      // Prepare email verification if needed
+      if (signUpAttempt.status === "needs_verification") {
+        await signUpAttempt.prepareEmailAddressVerification();
+        console.log("Sign-up successful! Please verify your email.");
+      } else {
+        console.log("Sign-up complete!", signUpAttempt);
+      }
     } catch (error) {
       console.error("Error during sign-up:", error.errors);
     }
-    // const response = await AuthService.register(data);
-    // console.log(response);
-    console.log(data);
   };
+
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-lg max-w-xl w-full">
@@ -41,7 +46,7 @@ const Signup = () => {
               label="First Name:"
               placeholder="First Name"
               type="text"
-              {...register("f_name", {
+              {...register("firstName", {
                 required: "First name is required",
               })}
             />
@@ -54,16 +59,21 @@ const Signup = () => {
               label="Last Name:"
               placeholder="Last Name"
               type="text"
-              {...register("l_name")}
+              {...register("lastName")}
             />
           </div>
           <div>
             <Input
               label="Mail ID:"
               placeholder="Mail ID"
-              type="text"
-              {...register("gmail")}
+              type="email"
+              {...register("emailAddress", {
+                required: "Email is required",
+              })}
             />
+            {errors.gmail && (
+              <p className="text-red-500">{errors.gmail.message}</p>
+            )}
           </div>
           <div>
             <Input
