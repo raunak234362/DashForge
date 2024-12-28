@@ -16,8 +16,12 @@ const Layout = () => {
         <Header sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
       </div>
       <div>
-        <Hero/>
-        <Features/>
+        <div>
+          <Hero />
+        </div>
+        <div>
+          <Features />
+        </div>
       </div>
     </div>
   );
