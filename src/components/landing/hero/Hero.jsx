@@ -47,11 +47,11 @@ const Hero = () => {
           {cardData.map((card, index) => (
             <div
               key={index}
-              className="bg-black/10 border-[1px] flex flex-col justify-center items-center px-5 py-2 gap-4 rounded-md text-white"
+              className="bg-black/10 border-[1px] flex flex-col justify-center text-center items-center px-5 py-5 gap-4 rounded-md text-white"
             >
-              <div className="text-3xl">{card.icon}</div>
-              <div className="text-3xl">{card.title}</div>
-              <div className="text-sm">{card.description}</div>
+              <div className="text-2xl">{card.icon}</div>
+              <div className="text-2xl">{card.title}</div>
+              <div className="text-base">{card.description}</div>
             </div>
           ))}
         </div>
