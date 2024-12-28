@@ -2,6 +2,7 @@
 import { useForm } from "react-hook-form";
 import { Input, Button } from "../index";
 import { useSignUp } from "@clerk/clerk-react";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
   const {
@@ -9,6 +10,8 @@ const Signup = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+
+  const navigate = useNavigate();
 
   const { isLoaded, signUp } = useSignUp();
 
@@ -25,6 +28,7 @@ const Signup = () => {
         console.log("Sign-up successful! Please verify your email.");
       } else {
         console.log("Sign-up complete!", signUpAttempt);
+        navigate("/dashboard");
       }
     } catch (error) {
       console.error("Error during sign-up:", error.errors);
