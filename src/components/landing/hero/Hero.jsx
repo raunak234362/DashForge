@@ -1,22 +1,24 @@
-/* eslint-disable no-unused-vars */
+import { AiFillThunderbolt } from "react-icons/ai";
+import { FaRegLightbulb } from "react-icons/fa";
+import { MdDashboard } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
   const cardData = [
     {
-      icon: "fas fa-chart-line",
+      icon: <FaRegLightbulb />,
       title: "AI-Powered",
       description: "Generate dashboards with AI-powered insights",
     },
     {
-      icon: "fas fa-chart-line",
-      title: "AI-Powered",
-      description: "Generate dashboards with AI-powered insights",
+      icon: <MdDashboard />,
+      title: "Drag & Drop",
+      description: "Customize layouts and components with intuitive controls",
     },
     {
-      icon: "fas fa-chart-line",
-      title: "AI-Powered",
-      description: "Generate dashboards with AI-powered insights",
+      icon: <AiFillThunderbolt />,
+      title: "Real-time Updates",
+      description: "Connect to live data sources for instant virtualization",
     },
   ];
 
@@ -41,20 +43,18 @@ const Hero = () => {
             <Link to="#">Watch Demo</Link>
           </div>
         </div>
-          <div className="flex flex-col md:flex-row justify-center gap-5 mt-10">
-            {cardData.map((card, index) => (
-              <div
-                key={index}
-                className="bg-black/10 border-[1px] p-5 gap-4 rounded-md text-white"
-              >
-                <div className="text-3xl">
-                  <i className={card.icon}></i>
-                </div>
-                <div className="text-xl font-bebas">{card.title}</div>
-                <div className="text-sm">{card.description}</div>
-              </div>
-            ))}
-          </div>
+        <div className="flex flex-col md:flex-row justify-center gap-5 mt-10">
+          {cardData.map((card, index) => (
+            <div
+              key={index}
+              className="bg-black/10 border-[1px] flex flex-col justify-center items-center px-5 py-2 gap-4 rounded-md text-white"
+            >
+              <div className="text-3xl">{card.icon}</div>
+              <div className="text-3xl">{card.title}</div>
+              <div className="text-sm">{card.description}</div>
+            </div>
+          ))}
+        </div>
       </section>
     </>
   );
