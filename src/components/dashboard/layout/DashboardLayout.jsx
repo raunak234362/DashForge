@@ -1,13 +1,17 @@
 import { useCallback, useEffect, useState } from "react";
 import { Sidebar } from "../../index";
 import { Outlet } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Service from "../../../config/Service";
 import { setUserData } from "../../../store/userSlice";
 import { setCompanyData } from "../../../store/companySlice";
+import { FaUserCircle } from "react-icons/fa";
 
 const DashboardLayout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const userData = useSelector((state) => state.user?.userData);
+  console.log(userData, 12);
+  
   const toggleSidebar = useCallback(() => {
     setSidebarOpen((prev) => !prev);
   }, []);
@@ -55,6 +59,10 @@ const DashboardLayout = () => {
             Menu
           </button>
           <h1 className="text-xl font-semibold">Dashboard</h1>
+          <div className="flex items-center space-x-2 cursor-pointer">
+          <FaUserCircle />
+          <p>{userData.username} </p>
+          </div>
         </header>
 
         {/* Content */}
