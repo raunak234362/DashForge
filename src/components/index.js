@@ -23,7 +23,7 @@ import Data from "./dashboard/main/dataImplementation/Data";
 import Hero from "./landing/hero/Hero";
 import Features from "./landing/feature/Features";
 import HowItWorks from "./landing/howItWorks/HowItWorks";
-import ADS from "./landing/aidashboard/ADS";
+import {ADS} from "./landing/aidashboard/ADS";
 import Footer from "./landing/footer/Footer";
 import Header from "./landing/header/Header";
 
