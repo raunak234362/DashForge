@@ -6,7 +6,6 @@ import Select from "./fields/Select";
 //login
 import Login from "./login/Login";
 import Signup from "./login/Signup";
-import AuthLayout from "./login/AuthLayout";
 
 //dashboard
 import DashboardLayout from "./dashboard/layout/DashboardLayout";
@@ -31,7 +30,6 @@ export {
   Sidebar,
   Login,
   Signup,
-  AuthLayout,
   AddCSV,
   ShowAllCSV,
   ShowAllCompany,

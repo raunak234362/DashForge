@@ -3,7 +3,7 @@ import { BarChart3 } from "lucide-react";
 import { Input, Button, DashboardLayout } from "../index";
 import { useForm } from "react-hook-form";
 import { SignedIn, SignedOut, useSignIn } from "@clerk/clerk-react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const {
@@ -65,7 +65,7 @@ const Login = () => {
                 <h2 className="text-xl font-semibold text-center">
                   Sign in to your account
                 </h2>
-                <p className="text-sm text-gray-500 text-center pb-2">
+                <p className="text-sm text-gray-400 text-center pb-2">
                   Enter your credentials to access your dashboards
                 </p>
               </div>
@@ -109,13 +109,13 @@ const Login = () => {
                   </a>
                 </div>
                 <div className="text-sm">
-                  Don’t have an account?{" "}
-                  <a
-                    href="/signup"
+                  Don't have an account?{" "}
+                  <Link
+                    to="/signup"
                     className="text-cyan-600 hover:text-cyan-800 font-semibold"
                   >
                     Sign up
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
