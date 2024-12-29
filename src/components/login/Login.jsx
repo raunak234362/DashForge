@@ -3,6 +3,7 @@ import { BarChart3 } from "lucide-react";
 import { Input, Button, DashboardLayout } from "../index";
 import { useForm } from "react-hook-form";
 import { SignedIn, SignedOut, useSignIn } from "@clerk/clerk-react";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const {
@@ -10,6 +11,8 @@ const Login = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+
+  const navigate = useNavigate();
 
   const { isLoaded, signIn } = useSignIn();
 
@@ -29,6 +32,7 @@ const Login = () => {
       if (signInAttempt.status === "complete") {
         console.log("Sign in successful!");
         // Redirect to dashboard or home page
+        navigate("/dashboard");
       } else {
         console.log("Additional steps required:", signInAttempt);
       }
