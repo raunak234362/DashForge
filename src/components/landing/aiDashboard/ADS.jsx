@@ -12,7 +12,7 @@ export const ADS = () => {
     {
       title: "Smart Layout Generation",
       description:
-        "AI analyzes your data structure and suggests optimal layouts and chart types for better visualization.",
+        "AI analyzes your data structure and suggests optimal layouts and charts for better visualization.",
       borderColor: "border-purple-500/20",
     },
     {

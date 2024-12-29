@@ -3,39 +3,39 @@ const Features = () => {
       {
         title: "Natural Language Input",
         description:
-          "Describe your dashboard needs in plain English. Our AI understands and creates exactly what you need",
+          "Explain your dashboard requirements. Our AI recognises your needs and produces precisely what you require.",
           borderColour: "border-cyan-500",
           shadowColour: "shadow-cyan-500/50",
       },
       {
         title: "AI-Powered Insights",
         description:
-          "Smart layout suggestions and component recommendations based on your data and requirements.",
+          "Smart layout suggestions and recommendations based on your requirements.",
         borderColour: "border-cyan-500",
         shadowColour: "shadow-cyan-500/50",
       },
       {
         title: "Drag & Drop",
         description:
-          "Effortlessly customize your dashboard layout with intuitive drag and drop controls.",
+          "Effortlessly customize your dashboard layout with the drag- drop & resize controls.",
           borderColour: "border-cyan-500",
           shadowColour: "shadow-cyan-500/50",
       },
       {
-        title: "Real-time Updates",
-        description: "Connect to live data sources for instant virtualization",
+        title: "Real-time Data Updates",
+        description: "Focused on the benefits of staying upto date and proactive.",
         borderColour: "border-cyan-500",
         shadowColour: "shadow-cyan-500/50",
       },
       {
-        title: "Data Integration",
+        title: "Seamless Data Integration",
         description:
           "Connect to various data sources including CSVs, databases, and APIs with ease.",
           borderColour: "border-cyan-500",
           shadowColour: "shadow-cyan-500/50",
       },
       {
-        title: "Advanced Controls",
+        title: "Advanced Customization",
         description:
           "Fine-tune your dashboards with advanced settings and customization options.",
           borderColour: "border-cyan-500",
