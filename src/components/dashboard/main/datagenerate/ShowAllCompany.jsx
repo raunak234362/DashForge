@@ -1,5 +1,19 @@
+import { useEffect, useState } from "react";
+import Service from "../../../../config/Service";
 
 const ShowAllCompany = () => {
+const[selectedCompany, setSelectedCompany] = useState(null);
+const[isModalOpen, setIsModalOpen] = useState(false);
+
+  const fetchAllCompany = async () => {
+    const response = await Service.fetchAllCompanies();
+    console.log(response);
+    return response;
+    }
+  useEffect(() => {
+    fetchAllCompany()
+  }, []);
+
   return (
     <div className="mt-5  h-[50vh] overflow-auto">
       <table className="h-fit md:w-full w-[90vw] border-collapse text-center md:text-lg text-xs rounded-xl">

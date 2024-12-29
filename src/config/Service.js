@@ -6,6 +6,39 @@ const baseUrl = import.meta.env.VITE_API_URL;
 console.log("API URL:", baseUrl);
 
 class Service {
+  static async addCompany(data) {
+    try {
+      const response = await axios.post(`${baseUrl}/createCompany`,data);
+      console.log("Response Data:", response.data);
+      return response.data;
+    } catch (error) {
+      console.error("Error adding company", error);
+      return null;
+    }
+  }
+
+  static async fetchAllCompanies() {
+    try {
+      const response = await axios.get(`${baseUrl}/fetchCompany`);
+      console.log("Response Data:", response.data);
+      return response.data.companies;
+    } catch (error) {
+      console.error("Error fetching all companies", error);
+      return null;
+    }
+  }
+
+  static async fetchCompany(companyId) {
+    try {
+      const response = await axios.get(`${baseUrl}/fetchCompany/${companyId}`);
+      console.log("Response Data:", response.data);
+      return response.data.company;
+    } catch (error) {
+      console.error("Error fetching company", error);
+      return null;
+    }
+  }
+
   static async fetchAI() {
     try {
       const response = await axios.post(`${baseUrl}/parse-csv`);

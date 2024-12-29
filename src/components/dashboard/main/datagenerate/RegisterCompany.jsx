@@ -14,7 +14,7 @@ const RegisterCompany = () => {
 
   const onSubmit = async (data) => {
     console.log(data);
-    const companyData = await Service.registerCompany(data);
+    const companyData = await Service.addCompany(data);
     console.log(companyData);
     setIsSubmitting(true);
 
