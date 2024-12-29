@@ -8,36 +8,35 @@ const Hero = () => {
     {
       icon: <FaRegLightbulb />,
       title: "AI-Powered",
-      description: "Generate dashboards with AI-powered insights",
-    },
+      description: "Leverage artificial intelligence to automatically generate dashboards tailored to your data.",
+  },
     {
       icon: <MdDashboard />,
-      title: "Drag & Drop",
-      description: "Customize layouts and components with intuitive controls",
-    },
+      title: "Effortless Customization",
+    description: "Easily design layouts and add charts & graphs with drag-and-drop simplicity.",
+  },
     {
       icon: <AiFillThunderbolt />,
-      title: "Real-time Updates",
-      description: "Connect to live data sources for instant virtualization",
-    },
+      title: "Real-Time Data Updates",
+    description: "Stay upto date with live data connections that refresh your dashboards instantly.",
+  },
   ];
 
   return (
     <>
       <section className="h-full md:h-screen px-5 font-markazi">
         <div className="text-5xl md:text-6xl xl:text-8xl font-bold text-center text-white">
-          <p>Create Custom Dashboards</p>
+          <p>Craft Personalized Dashboards Effortlessly</p>
           <p className="text-transparent bg-clip-text bg-gradient-to-t from-cyan-400 to-cyan-700">
-            Powered by AI
+          Harness the Power of AI
           </p>
         </div>
         <div className="md:text-3xl text-xl text-wrap text-center text-gray-500">
-          Transform your data into insights with AI-powered dashboard
-          generation. No coding required.
+        Turn raw data into actionable insights with AI-driven dashboard creation—no coding, just results.
         </div>
         <div className="flex justify-center mt-10 gap-5">
           <div className=" bg-cyan-800 px-3 py-2 rounded-md text-white text-xl">
-            <Link to="/login">Get Started</Link>
+            <Link to="/login">Get started</Link>
           </div>
           <div className=" bg-cyan-800 px-3 py-2 rounded-md text-white text-xl">
             <Link to="#">Watch Demo</Link>

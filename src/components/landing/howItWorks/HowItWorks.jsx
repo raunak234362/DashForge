@@ -41,7 +41,7 @@ const HowItWorks = ()=> {
             How DashForge Works
           </h2>
           <p className="text-xl md:text-2xl text-gray-400">
-            Create powerful dashboards in three simple steps
+          Build your dashboards in just three simple steps—fast, easy, and intelligent.
           </p>
         </div>
         
@@ -51,8 +51,8 @@ const HowItWorks = ()=> {
             icon={<div className="w-14 h-12 mx-auto flex items-center justify-center bg-gray-800 rounded-full">
               <PenLine className="w-6 h-6 text-white" />
             </div>}
-            title="Describe Your Dashboard"
-            description="Use natural language or forms to specify what you need in your dashboard. Our AI understands your requirements."
+            title="Tell Us What You Need"
+            description="Use natural language to specify what you need in your dashboard to represent your data effectively ."
           >
             <FormIllustration />
           </StepCard>
@@ -62,8 +62,8 @@ const HowItWorks = ()=> {
             icon={<div className="w-14 h-12 mx-auto flex items-center justify-center bg-gray-800 rounded-full">
               <Database className="w-6 h-6 text-white" />
             </div>}
-            title="AI Generates Layout"
-            description="Our AI analyzes your requirements and generates the perfect dashboard layout with recommended components."
+            title="Let AI Build Your Layout"
+            description="Our AI analyzes your requirements and generates the dashboard with recommended layouts and graphs."
           >
             <GridIllustration />
           </StepCard>
@@ -73,8 +73,8 @@ const HowItWorks = ()=> {
             icon={<div className="w-14 h-12 mx-auto flex items-center justify-center bg-gray-800 rounded-full">
               <Sliders className="w-6 h-6 text-white" />
             </div>}
-            title="Customize & Deploy"
-            description="Fine-tune your dashboard with drag-and-drop controls, connect your data sources, and deploy instantly."
+            title="Customize and Launch"
+            description="Connect your data, adjust your dashboard using drag-and-drop controls, and launch right away."
           >
             <ProgressBars />
           </StepCard>
