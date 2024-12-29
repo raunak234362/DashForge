@@ -42,7 +42,7 @@ const DashboardLayout = () => {
 
         {/* Content */}
         <main
-          className="flex-grow overflow-y-auto p-4 transition-all duration-300"
+          className="flex-grow p-4 transition-all duration-300"
         >
           {/* <div>
           <AddCSV/>

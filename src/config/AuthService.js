@@ -1,12 +1,12 @@
 /* eslint-disable no-unused-vars */
 import axios from "axios";
-import { BASE_URL } from "./constant";
-
+// import { BASE_URL } from "./constant";
+const baseUrl = import.meta.env.VITE_API_URL;
 class AuthService {
   static async login(data) {
     try {
       const formData = { ...data };
-      const response = await axios.post(`${BASE_URL}/auth/login/`, formData, {
+      const response = await axios.post(`${baseUrl}/auth/login/`, formData, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -31,7 +31,7 @@ class AuthService {
     try {
       const formData = { ...data };
       // console.log(formData)
-      const response = await axios.post(`${BASE_URL}/auth/signup/`, formData, {
+      const response = await axios.post(`${baseUrl}/auth/signup/`, formData, {
         headers: {
           "Content-Type": "application/json",
         },

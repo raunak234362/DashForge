@@ -21,7 +21,7 @@ function Input(
         <Textarea
           variant={variant}
           label={label}
-          className={`px-3 py-1 w-full rounded-lg bg-white text-gray-700 focus:bg-slate-300 focus:bg-opacity-60 duration-200 ${className}`}
+          className={`px-3 py-1 w-full rounded-lg bg-white text-gray-700 focus:bg-white focus:bg-opacity-80 duration-200 ${className}`}
           ref={ref}
           placeholder={label}
           {...props}
@@ -31,7 +31,7 @@ function Input(
         <div className="relative w-full">
           <label
             htmlFor={id}
-            className="flex items-center justify-center px-3 py-2 w-full text-gray-500 border border-gray-300 rounded-lg bg-white cursor-pointer hover:bg-slate-200 hover:border-slate-400 transition duration-200"
+            className="flex items-center justify-center px-3 py-1 w-full text-gray-900 border border-cyan-300 rounded-lg bg-white cursor-pointer hover:bg-slate-200 hover:border-slate-400 transition duration-200"
           >
             <span className="truncate">
               {props.value ? props.value.name : label || 'Choose a file'}
@@ -51,7 +51,7 @@ function Input(
             variant={variant}
             label={label}
             type={showPassword && type === 'password' ? 'text' : type}
-            className={`px-3 py-1 w-full rounded-lg bg-white text-gray-700 focus:bg-slate-300 focus:bg-opacity-60 duration-200 ${className}`}
+            className={`px-3 py-1 w-full rounded-lg bg-white text-gray-900 focus:bg-white focus:bg-opacity-80 duration-200 ${className}`}
             ref={ref}
             placeholder={label}
             {...props}

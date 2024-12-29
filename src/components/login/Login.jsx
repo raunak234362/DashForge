@@ -1,10 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
+
 import { BarChart3 } from "lucide-react";
 import { Input, Button, DashboardLayout } from "../index";
 import { useForm } from "react-hook-form";
 import { SignedIn, SignedOut, useSignIn } from "@clerk/clerk-react";
 import { Link, useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
 
 const Login = () => {
   const {
@@ -31,16 +31,16 @@ const Login = () => {
       });
   
       if (signInAttempt.status === "complete") {
-        toast.success("Sign in successful!");
+        console.log("Sign in successful!",signInAttempt);
+        // Redirect to dashboard or home page
         navigate("/dashboard");
       } else {
         console.log("Additional steps required:", signInAttempt);
       }
     } catch (error) {
       console.error("Error during sign-in:", error.message);
-      toast.error("Either the email or password is incorrect. Please try again.");
       if (error.errors) {
-        error.errors.forEach((err) => console.error(err.message)); 
+        error.errors.forEach((err) => console.error(err.message)); // Detailed error messages
       }
     }
   };
@@ -78,11 +78,11 @@ const Login = () => {
                       placeholder="Mail ID"
                       type="email"
                       {...register("emailAddress", {
-                        required: "Mail ID is required",
+                        required: "Mail ID is required", // Changed to 'emailAddress'
                       })}
                     />
                     {errors.emailAddress && (
-                      <p className="text-red-500">{errors.emailAddress.message}</p> 
+                      <p className="text-red-500">{errors.emailAddress.message}</p> // Updated to 'emailAddress'
                     )}
                   </div>
                   <div className="space-y-2">
