@@ -4,7 +4,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { DashboardLayout, Data, GenerateData,Login,Signup, Layout, MainDashboard, RegisterCompany, ShowAllCompany, Profile } from "./components/index.js";
+import { DashboardLayout, Data, GenerateData, Layout,Login, Signup, MainDashboard, RegisterCompany, ShowAllCompany, Profile } from "./components/index.js";
 import { ClerkProvider } from "@clerk/clerk-react";
 // import Login from "./components/authentication/Login.jsx";
 // import Signup from "./components/authentication/Signup.jsx";
