@@ -33,7 +33,7 @@ const GenerateData = () => {
               <ul className=" flex items-center justify-evenly gap-10 py-1 text-center">
               <li className="px-2">
                   <NavLink
-                    to=""
+                    to="company-list"
                     className={({ isActive }) =>
                       isActive
                         ? "bg-cyan-500/50 text-white drop-shadow-lg flex px-5 py-2 rounded-lg font-semibold"

@@ -17,7 +17,7 @@ import MainDashboard from "./dashboard/main/maindashboard/MainDashboard";
 import ShowAllCSV from "./dashboard/main/allCSV/ShowAllCSV";
 import ShowAllCompany from "./dashboard/main/datagenerate/ShowAllCompany";
 import RegisterCompany from "./dashboard/main/datagenerate/RegisterCompany";
-
+import Data from "./dashboard/main/dataImplementation/Data";
 
 import BarChart from "./dashboard/main/graphs/BarChart";
 import LineChart from "./dashboard/main/graphs/LineChart";
@@ -38,6 +38,7 @@ export {
   RegisterCompany,
   MainDashboard,
   GenerateData,
+  Data,
   BarChart,
   LineChart,
   PieChart,

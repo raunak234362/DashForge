@@ -4,7 +4,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { AuthLayout, DashboardLayout, GenerateData, Layout, Login, MainDashboard, RegisterCompany, ShowAllCompany, Signup } from "./components/index.js";
+import { AuthLayout, DashboardLayout, Data, GenerateData, Layout, Login, MainDashboard, RegisterCompany, ShowAllCompany, Signup } from "./components/index.js";
 import { ClerkProvider } from "@clerk/clerk-react";
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
@@ -35,7 +35,7 @@ const router = createBrowserRouter([
             element:<GenerateData/>,
             children:[
               {
-                path:"",
+                path:"company-list",
                 element:<ShowAllCompany/>
               },
               {
@@ -43,6 +43,10 @@ const router = createBrowserRouter([
                 element:<RegisterCompany/>
               }
             ]
+          },
+          {
+            path:"data",
+            element:<Data/>
           }
         ]
       },

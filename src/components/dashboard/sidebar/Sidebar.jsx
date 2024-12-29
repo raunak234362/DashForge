@@ -71,7 +71,7 @@ const Sidebar = () => {
 
           <li className="w-full">
             <NavLink
-              to="company"
+              to="company/company-list"
               className={({ isActive }) =>
                 isActive
                   ? "flex justify-center items-center text-white bg-teal-400 rounded-md w-full  delay-150 transition-all ease-in-out"
