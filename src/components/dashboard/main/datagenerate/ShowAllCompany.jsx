@@ -18,8 +18,9 @@ const[isModalOpen, setIsModalOpen] = useState(false);
     fetchAllCompany()
   }, []);
 
-  const handleViewClick = async (companyId) => {
-    setSelectedCompany(companyId);
+  const handleViewClick = async (company) => {
+    console.log(company)
+    setSelectedCompany(company);
     setIsModalOpen(true);
   };
   const handleModalClose = async () => {
@@ -28,7 +29,7 @@ const[isModalOpen, setIsModalOpen] = useState(false);
   }
 
   return (
-    <div className="mt-5  h-[50vh] overflow-auto">
+    <div className="mt-5 h-[50vh] overflow-auto px-5">
       <table className="h-fit md:w-full w-[90vw] border-collapse text-center md:text-lg text-xs rounded-xl">
         <thead>
             <tr className="bg-teal-200/30">
@@ -49,7 +50,7 @@ const[isModalOpen, setIsModalOpen] = useState(false);
                 <td className="px-2 py-1">{company.location}</td>
                 <td className="px-2 py-1">{company.website}</td>
                 <td className="border px-2 py-1">
-                  <Button onClick={() => handleViewClick(company.id)}>
+                  <Button onClick={() => handleViewClick(company)}>
                     View
                   </Button>
                 </td>
@@ -59,9 +60,9 @@ const[isModalOpen, setIsModalOpen] = useState(false);
       </table>
       {selectedCompany && (
         <FetchCompany 
-        CompanyID = {selectedCompany}
+        Company = {selectedCompany}
         isModalOpen = {isModalOpen}
-        handleModalClose = {handleModalClose}
+        onClose = {handleModalClose}
         />
       )}
     </div>

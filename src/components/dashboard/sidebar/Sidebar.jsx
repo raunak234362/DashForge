@@ -61,8 +61,8 @@ const Sidebar = () => {
               end
               className={({ isActive }) =>
                 isActive
-                  ? "flex justify-center items-center text-white bg-teal-400 rounded-md w-full  delay-150"
-                  : "text-black hover:text-white hover:flex hover:justify-center hover:items-center hover:bg-teal-200  rounded-md"
+                  ? "flex justify-center items-center text-white bg-cyan-500/50 py-2 rounded-md w-full delay-150"
+                  : "text-black hover:text-white hover:flex hover:justify-center py-2 hover:items-center hover:bg-teal-200 transition-all rounded-md"
               }
             >
               <div>Dashboard</div>
@@ -74,8 +74,8 @@ const Sidebar = () => {
               to="company/company-list"
               className={({ isActive }) =>
                 isActive
-                  ? "flex justify-center items-center text-white bg-teal-400 rounded-md w-full  delay-150 transition-all ease-in-out"
-                  : "text-black hover:text-white hover:flex hover:justify-center hover:items-center hover:bg-teal-200  rounded-md"
+                  ? "flex justify-center items-center text-white bg-cyan-500/50 rounded-md w-full py-2  delay-150 transition-all ease-in-out"
+                  : "text-black hover:text-white hover:flex hover:justify-center hover:items-center py-2 hover:bg-teal-200 transition-ease-in rounded-md"
               }
             >
               <div>Company</div>
@@ -86,8 +86,8 @@ const Sidebar = () => {
               to="data"
               className={({ isActive }) =>
                 isActive
-                  ? "flex justify-center items-center text-white bg-teal-400 rounded-md w-full  delay-150 transition-all ease-in-out"
-                  : "text-black hover:text-white hover:flex hover:justify-center hover:items-center hover:bg-teal-200  rounded-md"
+                  ? "flex justify-center items-center text-white bg-cyan-500/50 rounded-md py-2 w-full  delay-150 transition-all ease-in-out"
+                  : "text-black hover:text-white hover:flex hover:justify-center hover:items-center py-2 hover:bg-teal-200 transition-ease-in rounded-md"
               }
             >
               <div>Data</div>
@@ -98,8 +98,8 @@ const Sidebar = () => {
               to="profile"
               className={({ isActive }) =>
                 isActive
-                  ? "flex justify-center items-center text-white bg-teal-400 rounded-md w-full  delay-150 transition-all ease-in-out"
-                  : "text-black hover:text-white hover:flex hover:justify-center hover:items-center hover:bg-teal-200  rounded-md"
+                  ? "flex justify-center items-center text-white bg-cyan-500/50 rounded-md w-full py-2 delay-150 transition-all ease-in-out"
+                  : "text-black hover:text-white hover:flex hover:justify-center hover:items-center py-2 hover:bg-teal-200 transition-ease-in rounded-md"
               }
             >
               <div>Profile</div>
@@ -109,7 +109,7 @@ const Sidebar = () => {
         </ul>
       </nav>
       <div className="md:flex md:justify-right mb-5">
-        <Button className="bg-teal-400 mx-4 w-full" onClick={fetchLogout}>
+        <Button className="bg-cyan-500/50 mx-4 w-full" onClick={fetchLogout}>
           Logout
         </Button>
         <div className="text-lg text-black md:hidden block">
