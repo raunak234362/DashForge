@@ -23,7 +23,8 @@ import Profile from "./dashboard/main/profile/Profile"
 import Hero from "./landing/hero/Hero";
 import Features from "./landing/feature/Features";
 import HowItWorks from "./landing/howItWorks/HowItWorks";
-import {ADS} from "./landing/aidashboard/ADS";
+// import {ADS} from "./landing/aidashboard/ADS";
+import { ADashboard } from "./landing/aidashboard/ADashboard";
 import Footer from "./landing/footer/Footer";
 import Header from "./landing/header/Header";
 
@@ -41,8 +42,8 @@ export {
   Features,
   Header,
   HowItWorks,
-  ADS,
   Footer,
+  ADashboard,
   DashboardLayout,
   Sidebar,
   Login,
