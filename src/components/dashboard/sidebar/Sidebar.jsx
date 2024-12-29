@@ -61,7 +61,7 @@ const Sidebar = () => {
               end
               className={({ isActive }) =>
                 isActive
-                  ? "flex justify-center items-center text-white bg-cyan-500/50 py-2 rounded-md w-full delay-150"
+                 ? "flex justify-center items-center text-white bg-cyan-500/50 rounded-md w-full py-2 font-semibold  delay-150 transition-all ease-in-out"
                   : "text-black hover:text-white hover:flex hover:justify-center py-2 hover:items-center hover:bg-teal-200 transition-all rounded-md"
               }
             >
@@ -74,7 +74,7 @@ const Sidebar = () => {
               to="company/company-list"
               className={({ isActive }) =>
                 isActive
-                  ? "flex justify-center items-center text-white bg-cyan-500/50 rounded-md w-full py-2  delay-150 transition-all ease-in-out"
+                  ? "flex justify-center items-center text-white bg-cyan-500/50 rounded-md w-full py-2 font-semibold  delay-150 transition-all ease-in-out"
                   : "text-black hover:text-white hover:flex hover:justify-center hover:items-center py-2 hover:bg-teal-200 transition-ease-in rounded-md"
               }
             >
@@ -86,7 +86,7 @@ const Sidebar = () => {
               to="data"
               className={({ isActive }) =>
                 isActive
-                  ? "flex justify-center items-center text-white bg-cyan-500/50 rounded-md py-2 w-full  delay-150 transition-all ease-in-out"
+                 ? "flex justify-center items-center text-white bg-cyan-500/50 rounded-md w-full py-2 font-semibold  delay-150 transition-all ease-in-out"
                   : "text-black hover:text-white hover:flex hover:justify-center hover:items-center py-2 hover:bg-teal-200 transition-ease-in rounded-md"
               }
             >
@@ -98,7 +98,7 @@ const Sidebar = () => {
               to="profile"
               className={({ isActive }) =>
                 isActive
-                  ? "flex justify-center items-center text-white bg-cyan-500/50 rounded-md w-full py-2 delay-150 transition-all ease-in-out"
+                 ? "flex justify-center items-center text-white bg-cyan-500/50 rounded-md w-full py-2 font-semibold  delay-150 transition-all ease-in-out"
                   : "text-black hover:text-white hover:flex hover:justify-center hover:items-center py-2 hover:bg-teal-200 transition-ease-in rounded-md"
               }
             >

@@ -35,8 +35,8 @@ const Header = () => {
 
   return (
     <div className="w-full flex justify-center md:py-2">
-      <nav className="md:bg-transparent bg-gradient-to-t from-gray-700 to-blue-gray-800 text-lg shadow-md md:w-[95%] w-full md:rounded-xl md:top-2 z-50 overflow-x-hidden">
-        <div className="max-w-screen-xl mx-auto flex items-center justify-between px-4 py-3 md:px-6 lg:px-8">
+      <nav className=" bg-blue-gray-900 text-lg shadow-md md:w-[95%] w-full md:rounded-xl md:top-2 z-50 overflow-x-hidden">
+        <div className="max-w-screen-xl mx-auto flex items-center justify-between py-3 md:px-6 lg:px-8">
           {/* Logo */}
           <div className="text-white font-bold">DashForge</div>
 
@@ -70,12 +70,16 @@ const Header = () => {
               isMenuOpen ? "block" : "hidden"
             }`}
           >
-            <ul className="flex flex-col md:bg-transparent md:flex-row bg-blue-gray-900 text-center md:space-x-10 text-lg">
+            <ul className="flex flex-col md:bg-transparent md:flex-row bg-blue-gray-900 text-center md:space-x-16 text-lg">
               {isLoggedIn && (
                 <li className="py-2 md:py-0">
                   <NavLink
                     to="/registerCompany"
-                    className="block text-white hover:text-teal-800 transition-colors duration-200 tracking-wide"
+                    className={({ isActive }) =>
+                      isActive
+                    ? "block text-xl text-white transition-colors duration-200 tracking-wide bg-cyan-500 hover:bg-cyan-500/50 px-3 py-1 rounded-lg "  
+                    : "block text-xl text-white transition-colors duration-200 tracking-wide hover:bg-cyan-500/50 px-3 py-1 rounded-lg "
+                    }
                     style={{
                       textShadow: "2px 2px 2px #228EFD",
                     }}
@@ -88,7 +92,11 @@ const Header = () => {
                 <li className="py-2 md:py-0">
                   <NavLink
                     to="/profile"
-                    className="block text-xl text-white hover:text-teal-800 transition-colors duration-200 tracking-wide"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "block text-xl text-white transition-colors duration-200 tracking-wide bg-cyan hover:bg-cyan-500/50 px-3 py-1 rounded-lg "
+                        : "block text-xl text-white transition-colors duration-200 tracking-wide hover:bg-cyan-500/50 px-3 py-1 rounded-lg "
+                    }
                     style={{
                       textShadow: "2px 2px 2px #228EFD",
                     }}
@@ -101,7 +109,11 @@ const Header = () => {
                 <li className="py-2 md:py-0">
                   <NavLink
                     to="/dashboard"
-                    className="block text-xl text-white hover:text-teal-800 transition-colors duration-200 tracking-wide"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "block text-xl text-white transition-colors duration-200 tracking-wide bg-cyan-500 hover:bg-cyan-500/50 px-3 py-1 rounded-lg "
+                        : "block text-xl text-white transition-colors duration-200 tracking-wide hover:bg-cyan-500/50 px-3 py-1 rounded-lg "
+                    }
                     style={{
                       textShadow: "2px 2px 2px #228EFD",
                     }}
@@ -113,8 +125,12 @@ const Header = () => {
 
               <li className="py-2 md:py-0">
                 <NavLink
-                  to="/Home"
-                  className="block text-xl text-white hover:text-teal-800 transition-colors duration-200 tracking-wide"
+                  to="/"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "block text-xl text-white transition-colors duration-200 tracking-wide bg-cyan-500 hover:bg-cyan-500/50 px-3 py-1 rounded-lg "
+                      : "block text-xl text-white transition-colors duration-200 tracking-wide hover:bg-cyan-500/50 px-3 py-1 rounded-lg "
+                  }
                 >
                   Home
                 </NavLink>
@@ -122,7 +138,11 @@ const Header = () => {
               <li className="py-2 md:py-0">
                 <NavLink
                   to="/Home"
-                  className="block text-xl text-white hover:text-teal-800 transition-colors duration-200 tracking-wide"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "block text-xl text-white transition-colors duration-200 tracking-wide bg-cyan-500 hover:bg-cyan-500/50 px-3 py-1 rounded-lg "
+                      : "block text-xl text-white transition-colors duration-200 tracking-wide hover:bg-cyan-500/50 px-3 py-1 rounded-lg "
+                  }
                 >
                   About
                 </NavLink>
@@ -130,7 +150,11 @@ const Header = () => {
               <li className="py-2 md:py-0">
                 <NavLink
                   to="/Home"
-                  className="block text-xl text-white hover:text-teal-800 transition-colors duration-200 tracking-wide"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "block text-xl text-white transition-colors duration-200 tracking-wide bg-cyan-500 hover:bg-cyan-500/50 px-3 py-1 rounded-lg "
+                      : "block text-xl text-white transition-colors duration-200 tracking-wide hover:bg-cyan-500/50 px-3 py-1 rounded-lg "
+                  }
                 >
                   Features
                 </NavLink>
