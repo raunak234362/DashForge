@@ -30,17 +30,7 @@ const Sidebar = () => {
       console.error("Logout failed:", error);
     }
   };
-  // Sidebar.js
-  // const fetchLogout = async () => {
-  //   try {
 
-  //     const response = await AuthService.logout(token);
-  //     dispatch(logoutAction());
-  //     navigate("/");
-  //   } catch (error) {
-  //     console.error("Logout failed:", error);
-  //   }
-  // };
 
   useEffect(() => {
     // fetchUserData();
