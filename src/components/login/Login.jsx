@@ -46,16 +46,16 @@ const Login = () => {
   
 
   return (
-    <div>
+    <div className=" ">
       <SignedOut>
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
-          <div className="w-full max-w-md">
+        <div className="min-h-screen flex items-center justify-center p-4  bg-gradient-to-t from-black to-blue-gray-800">
+          <div className="w-full md:w-1/2 border-gray-400 border-2 md:p-10 p-4 rounded-2xl bg-white/30">
             <div className="text-center mb-8">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-400 text-white mb-4">
                 <BarChart3 className="w-8 h-8" />
               </div>
               <h1 className="text-2xl font-bold text-gray-900">DashForge</h1>
-              <p className="text-gray-600 mt-2">
+              <p className="text-gray-800 mt-2">
                 Transform your data into dynamic dashboards
               </p>
             </div>
@@ -65,7 +65,7 @@ const Login = () => {
                 <h2 className="text-xl font-semibold text-center">
                   Sign in to your account
                 </h2>
-                <p className="text-sm text-gray-500 text-center">
+                <p className="text-sm text-gray-500 text-center pb-2">
                   Enter your credentials to access your dashboards
                 </p>
               </div>
@@ -97,14 +97,14 @@ const Login = () => {
                       <p className="text-red-500">{errors.password.message}</p>
                     )}
                   </div>
-                  <Button type="submit" className="w-full bg-indigo-600 hover:bg-indigo-700">
+                  <Button type="submit" className="w-full ">
                     Sign In
                   </Button>
                 </form>
               </div>
               <div className="flex flex-col space-y-4 text-center mt-4">
                 <div className="text-sm text-gray-500">
-                  <a href="#" className="text-indigo-600 hover:text-indigo-500">
+                  <a href="#" className="text-cyan-600 hover:text-cyan-800">
                     Forgot your password?
                   </a>
                 </div>
@@ -112,7 +112,7 @@ const Login = () => {
                   Don’t have an account?{" "}
                   <a
                     href="/signup"
-                    className="text-indigo-600 hover:text-indigo-500 font-semibold"
+                    className="text-cyan-600 hover:text-cyan-800 font-semibold"
                   >
                     Sign up
                   </a>
