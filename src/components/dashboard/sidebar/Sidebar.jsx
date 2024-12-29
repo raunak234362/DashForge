@@ -4,6 +4,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { Button } from "../../index";
+import { toast } from "react-toastify";
 
 // import AuthService from "../../../frappeConfig/AuthService";
 const Sidebar = () => {
@@ -25,9 +26,11 @@ const Sidebar = () => {
   const fetchLogout = async () => {
     try {
       clearCookies();
+      toast.success("Logged out successfully!");
       navigate("/login");
     } catch (error) {
       console.error("Logout failed:", error);
+      toast.error("Logout Failed")
     }
   };
 

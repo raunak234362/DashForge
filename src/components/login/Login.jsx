@@ -1,10 +1,9 @@
-/* eslint-disable react/no-unescaped-entities */
-
 import { BarChart3 } from "lucide-react";
 import { Input, Button, DashboardLayout } from "../index";
 import { useForm } from "react-hook-form";
 import { SignedIn, SignedOut, useSignIn } from "@clerk/clerk-react";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const {
@@ -26,21 +25,21 @@ const Login = () => {
   
     try {
       const signInAttempt = await signIn.create({
-        identifier,  // Using the correct identifier (emailAddress or username)
+        identifier, 
         password,
       });
   
       if (signInAttempt.status === "complete") {
-        console.log("Sign in successful!");
-        // Redirect to dashboard or home page
+        toast.success("Sign in successful!");
         navigate("/dashboard");
       } else {
         console.log("Additional steps required:", signInAttempt);
       }
     } catch (error) {
       console.error("Error during sign-in:", error.message);
+      toast.error("Either the email or password is incorrect. Please try again.");
       if (error.errors) {
-        error.errors.forEach((err) => console.error(err.message)); // Detailed error messages
+        error.errors.forEach((err) => console.error(err.message)); 
       }
     }
   };
@@ -78,11 +77,11 @@ const Login = () => {
                       placeholder="Mail ID"
                       type="email"
                       {...register("emailAddress", {
-                        required: "Mail ID is required", // Changed to 'emailAddress'
+                        required: "Mail ID is required",
                       })}
                     />
                     {errors.emailAddress && (
-                      <p className="text-red-500">{errors.emailAddress.message}</p> // Updated to 'emailAddress'
+                      <p className="text-red-500">{errors.emailAddress.message}</p> 
                     )}
                   </div>
                   <div className="space-y-2">

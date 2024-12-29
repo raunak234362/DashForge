@@ -4,6 +4,7 @@ import { Input, Button } from "../index";
 import { useSignUp } from "@clerk/clerk-react";
 import { Link, useNavigate } from "react-router-dom";
 import { BarChart3 } from "lucide-react";
+import { toast } from "react-toastify";
 
 const Signup = () => {
   const {
@@ -29,10 +30,12 @@ const Signup = () => {
         console.log("Sign-up successful! Please verify your email.");
       } else {
         console.log("Sign-up complete!", signUpAttempt);
+        toast.success("Sign up successful!");
         navigate("/dashboard");
       }
     } catch (error) {
       console.error("Error during sign-up:", error.errors);
+      toast.error("Sign up failed. Please try again.");
     }
   };
 
