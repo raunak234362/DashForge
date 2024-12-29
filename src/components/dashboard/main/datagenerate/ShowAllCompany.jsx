@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import Service from "../../../../config/Service";
+import FetchCompany from "./FetchCompany";
+import { Button } from "../../../index";
 
 const ShowAllCompany = () => {
   const [company, setCompany] = useState([]);
@@ -9,7 +11,7 @@ const[isModalOpen, setIsModalOpen] = useState(false);
   const fetchAllCompany = async () => {
     const response = await Service.fetchAllCompanies();
     setCompany(response);
-    console.log(response);
+    console.log(company);
     return response;
     }
   useEffect(() => {
@@ -39,13 +41,29 @@ const[isModalOpen, setIsModalOpen] = useState(false);
             </tr>
         </thead>
         <tbody>
-            {company.map((company) => (
+            {company?.map((company) => (
               <tr key={company._id} className="bg-teal-200/20">
-                <td className="px-2 py-1">{company.name}</td>
+                <td className="px-2 py-1">{company.companyName}</td>
+                <td className="px-2 py-1">{company.typeOrganisation}</td>
+                <td className="px-2 py-1">{company.teamSize}</td>
+                <td className="px-2 py-1">{company.location}</td>
+                <td className="px-2 py-1">{company.website}</td>
+                <td className="border px-2 py-1">
+                  <Button onClick={() => handleViewClick(company.id)}>
+                    View
+                  </Button>
+                </td>
               </tr>
             ))}
         </tbody>
       </table>
+      {selectedCompany && (
+        <FetchCompany 
+        CompanyID = {selectedCompany}
+        isModalOpen = {isModalOpen}
+        handleModalClose = {handleModalClose}
+        />
+      )}
     </div>
   )
 }

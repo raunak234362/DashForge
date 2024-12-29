@@ -19,9 +19,9 @@ class Service {
 
   static async fetchAllCompanies() {
     try {
-      const response = await axios.get(`${baseUrl}/fetchCompany`);
+      const response = await axios.get(`${baseUrl}/fetchAllCompanies`);
       console.log("Response Data:", response.data);
-      return response.data.companies;
+      return response.data;
     } catch (error) {
       console.error("Error fetching all companies", error);
       return null;
