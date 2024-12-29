@@ -1,33 +1,33 @@
 import { DashboardPreview } from "./DashboardPreview";
-// import { FeatureCard } from "./FeatureCard";
+import { FeatureCard } from "./FeatureCard";
 
 const ADashboard = () => {
-//   const features = [
-//     {
-//       title: "Natural Language Processing",
-//       description:
-//         "Transform your dashboard requirements from plain English into powerful visualizations automatically.",
-//       borderColor: "border-blue-500/20",
-//     },
-//     {
-//       title: "Smart Layout Generation",
-//       description:
-//         "AI analyzes your data structure and suggests optimal layouts and charts for better visualization.",
-//       borderColor: "border-purple-500/20",
-//     },
-//     {
-//       title: "Automated Insights",
-//       description:
-//         "Get AI-powered insights and anomaly detection from your data in real-time.",
-//       borderColor: "border-gradient-to-r from-blue-500/20 to-purple-500/20",
-//     },
-//     {
-//       title: "Predictive Analytics",
-//       description:
-//         "Leverage machine learning models to forecast trends and predict future metrics.",
-//       borderColor: "border-red-500/20",
-//     },
-//   ];
+  const features = [
+    {
+      title: "Natural Language Processing",
+      description:
+        "Transform your dashboard requirements from plain English into powerful visualizations automatically.",
+      borderColor: "border-blue-500/20",
+    },
+    {
+      title: "Smart Layout Generation",
+      description:
+        "AI analyzes your data structure and suggests optimal layouts and charts for better visualization.",
+      borderColor: "border-purple-500/20",
+    },
+    {
+      title: "Automated Insights",
+      description:
+        "Get AI-powered insights and anomaly detection from your data in real-time.",
+      borderColor: "border-gradient-to-r from-blue-500/20 to-purple-500/20",
+    },
+    {
+      title: "Predictive Analytics",
+      description:
+        "Leverage machine learning models to forecast trends and predict future metrics.",
+      borderColor: "border-red-500/20",
+    },
+  ];
   return (
     <>
     <section className=" mt-10 px-8">
@@ -48,14 +48,14 @@ const ADashboard = () => {
           </div>
 
           <div className="order-1 md:order-2 space-y-4">
-            {/* {features.map((feature, index) => (
+            {features.map((feature, index) => (
               <FeatureCard
                 key={index}
                 title={feature.title}
                 description={feature.description}
                 borderColor={feature.borderColor}
               />
-            ))} */}
+            ))}
           </div>
         </div>
       </div>
