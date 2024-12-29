@@ -24,7 +24,7 @@ const features = [
   },
 ];
 
-const AIDashboardSection= ()=> {
+const ADS= ()=> {
   return (
     <section className=" mt-10 px-8">
       <div className="max-w-7xl mx-auto">
@@ -58,4 +58,4 @@ const AIDashboardSection= ()=> {
   );
 }
 
-export default AIDashboardSection;
+export default ADS;

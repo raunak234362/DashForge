@@ -3,8 +3,8 @@ import Header from "./header/Header";
 import Hero from "./hero/Hero";
 import Features from "./feature/Features";
 import { HowItWorks } from "./howItWorks/HowItWorks";
-import { AIDashboardSection } from "./aidashboard/AIDSection";
 import Footer from "./footer/Footer"
+import ADS from "./aidashboard/ADS";
 const Layout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -28,7 +28,7 @@ const Layout = () => {
           <HowItWorks />
         </div>
         <div>
-          <AIDashboardSection/>
+          <ADS/>
         </div>
       </div>
       <div>
