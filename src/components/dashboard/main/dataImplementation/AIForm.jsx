@@ -55,8 +55,8 @@ const AIForm = () => {
         <div>
           <Input
             label="Prompt"
-            type="text"
-            placeholder="Write your prompt here"
+            type="textarea"
+            placeholder="Prompt"
             {...register("prompt")}
           />
         </div>
