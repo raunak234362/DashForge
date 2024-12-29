@@ -27,14 +27,8 @@ const RegisterCompany = () => {
 
   return (
     <>
-      <section className="h-fit w-full bg-white/30 rounded-md p-5">
-        <div className="w-full flex justify-center">
-          <div className="">
-            <h1 className="bg-blue-gray-900 text-xl  font-bold text-white mb-5 px-5 py-1 rounded-md">
-              Register Company
-            </h1>
-          </div>
-        </div>
+      <section className="h-fit w-full  rounded-md p-5">
+       
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
           <div>
             <Input
@@ -84,6 +78,15 @@ const RegisterCompany = () => {
               {...register("teamSize")}
               onChange={setValue}
             />
+          </div>
+          <div>
+            <Input
+              label="Website"
+              type="text"
+              placeholder="Website"
+              {...register("website", { required: true })}
+            />
+            {errors.website && <div>This field is required</div>}
           </div>
 
           <Button type="submit" disabled={isSubmitting}>
