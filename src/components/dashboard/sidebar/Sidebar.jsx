@@ -104,7 +104,7 @@ const Sidebar = () => {
         </ul>
       </nav>
       <div className="md:flex md:justify-right mb-5">
-        <Button className="bg-cyan-500/50 mx-4 w-full" onClick={fetchLogout}>
+        <Button className=" mx-4 w-full" onClick={fetchLogout}>
           Logout
         </Button>
         <div className="text-lg text-black md:hidden block">
