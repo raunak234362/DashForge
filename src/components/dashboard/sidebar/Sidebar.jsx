@@ -5,6 +5,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { Button } from "../../index";
 import { toast } from "react-toastify";
+import { BiSolidDashboard } from "react-icons/bi";
+import { FaBuilding, FaUser } from "react-icons/fa";
+import { BsFillClipboard2DataFill } from "react-icons/bs";
 
 // import AuthService from "../../../frappeConfig/AuthService";
 const Sidebar = () => {
@@ -55,7 +58,7 @@ const Sidebar = () => {
                   : "text-black hover:text-white hover:flex hover:justify-center py-2 hover:items-center hover:bg-teal-200 transition-all rounded-md"
               }
             >
-              <div>Dashboard</div>
+              <div className="flex gap-2 items-center"><BiSolidDashboard /> Dashboard</div>
             </NavLink>
           </li>
 
@@ -68,7 +71,7 @@ const Sidebar = () => {
                   : "text-black hover:text-white hover:flex hover:justify-center hover:items-center py-2 hover:bg-teal-200 transition-ease-in rounded-md"
               }
             >
-              <div>Company</div>
+              <div className="flex gap-2 items-center"><FaBuilding />Company</div>
             </NavLink>
           </li>
           <li className="w-full">
@@ -80,7 +83,7 @@ const Sidebar = () => {
                   : "text-black hover:text-white hover:flex hover:justify-center hover:items-center py-2 hover:bg-teal-200 transition-ease-in rounded-md"
               }
             >
-              <div>Data</div>
+              <div className="flex gap-2 items-center"><BsFillClipboard2DataFill />Data</div>
             </NavLink>
           </li>
           <li className="w-full">
@@ -92,7 +95,7 @@ const Sidebar = () => {
                   : "text-black hover:text-white hover:flex hover:justify-center hover:items-center py-2 hover:bg-teal-200 transition-ease-in rounded-md"
               }
             >
-              <div>Profile</div>
+              <div className="flex gap-2 items-center"><FaUser />Profile</div>
             </NavLink>
           </li>
           <li></li>
