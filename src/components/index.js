@@ -15,6 +15,8 @@ import AddCSV from "./csv/CSV";
 import GenerateData from "./dashboard/main/datagenerate/GenerateData";
 import MainDashboard from "./dashboard/main/maindashboard/MainDashboard";
 import ShowAllCSV from "./dashboard/main/allCSV/ShowAllCSV";
+import ShowAllCompany from "./dashboard/main/datagenerate/ShowAllCompany";
+import RegisterCompany from "./dashboard/main/datagenerate/RegisterCompany";
 
 export {
   Layout,
@@ -28,6 +30,8 @@ export {
   AuthLayout,
   AddCSV,
   ShowAllCSV,
+  ShowAllCompany,
+  RegisterCompany,
   MainDashboard,
   GenerateData,
 };
