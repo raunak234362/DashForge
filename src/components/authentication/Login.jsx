@@ -4,9 +4,12 @@ import { BarChart3 } from "lucide-react";
 import { Input, Button } from "../index";
 import { useForm } from "react-hook-form";
 // import { SignedIn, SignedOut, useSignIn } from "@clerk/clerk-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AuthService from "../../config/AuthService";
-
+import { toast } from "react-toastify";
+import { useDispatch, useSelector } from "react-redux";
+import { setUserData } from "../../store/userSlice";
+import Service from "../../config/Service";
 const Login = () => {
   const {
     register,
@@ -14,12 +17,25 @@ const Login = () => {
     formState: { errors },
   } = useForm();
 
+  const user = useSelector((state) => state.user?.userData);
+  console.log("User Data", user);
+  const dispatch = useDispatch();
+
+  const navigate = useNavigate();
+
+  const token = sessionStorage.getItem("token");
+
   const onSubmit = async (data) => {
-    const session = AuthService.login(data);
+    const session = await AuthService.login(data);
     if (session) {
       console.log("Sign in successful!", session);
-    }else{
-        console.log("Sign in failed!");
+      sessionStorage.setItem("token", session.token);
+      const userData = await Service.getCurrentUser(token);
+      dispatch(setUserData(userData.data));
+      toast.success("Sign up successful");
+      navigate("/dashboard");
+    } else {
+      console.log("Sign in failed!");
     }
   };
 
@@ -53,14 +69,12 @@ const Login = () => {
                     label="Mail ID:"
                     placeholder="Mail ID"
                     type="email"
-                    {...register("emailAddress", {
+                    {...register("gmail", {
                       required: "Mail ID is required", // Changed to 'emailAddress'
                     })}
                   />
-                  {errors.emailAddress && (
-                    <p className="text-red-500">
-                      {errors.emailAddress.message}
-                    </p> // Updated to 'emailAddress'
+                  {errors.gmail && (
+                    <p className="text-red-500">{errors.gmail.message}</p> // Updated to 'emailAddress'
                   )}
                 </div>
                 <div className="space-y-2">

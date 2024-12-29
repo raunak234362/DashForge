@@ -2,9 +2,12 @@ import { useForm } from "react-hook-form";
 import { Input, Button, Select } from "../../../index";
 import Service from "../../../../config/Service";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { setCompanyData } from "../../../../store/companySlice";
 
 const RegisterCompany = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const dispatch = useDispatch();
   const {
     register,
     handleSubmit,
@@ -15,20 +18,17 @@ const RegisterCompany = () => {
   const onSubmit = async (data) => {
     console.log(data);
     const companyData = await Service.addCompany(data);
-    console.log(companyData);
+    dispatch(setCompanyData(companyData));
     setIsSubmitting(true);
 
-    // Simulating an API call
     await new Promise((resolve) => setTimeout(resolve, 2000));
 
     setIsSubmitting(false);
-    // Redirect to a success page or dashboard
   };
 
   return (
     <>
       <section className="h-fit w-full  rounded-md p-5">
-       
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
           <div>
             <Input

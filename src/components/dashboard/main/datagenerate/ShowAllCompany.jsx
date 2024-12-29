@@ -1,22 +1,15 @@
-import { useEffect, useState } from "react";
-import Service from "../../../../config/Service";
+import { useState } from "react";
 import FetchCompany from "./FetchCompany";
 import { Button } from "../../../index";
+import { useSelector } from "react-redux";
 
 const ShowAllCompany = () => {
-  const [company, setCompany] = useState([]);
+  
 const[selectedCompany, setSelectedCompany] = useState(null);
 const[isModalOpen, setIsModalOpen] = useState(false);
+const company =useSelector((state) => state.company?.companyData);
 
-  const fetchAllCompany = async () => {
-    const response = await Service.fetchAllCompanies();
-    setCompany(response);
-    console.log(company);
-    return response;
-    }
-  useEffect(() => {
-    fetchAllCompany()
-  }, []);
+
 
   const handleViewClick = async (company) => {
     console.log(company)

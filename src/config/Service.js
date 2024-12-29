@@ -6,6 +6,23 @@ const baseUrl = import.meta.env.VITE_API_URL;
 console.log("API URL:", baseUrl);
 
 class Service {
+
+  static async getCurrentUser(token){
+    try {
+      const response = await axios.get(`${baseUrl}/auth/current-user`,{
+        headers:{
+          'Content-Type': 'application/json',
+          Authorization:`Bearer ${token}`
+        }
+      });
+      console.log("Current User",response)
+      return response;
+    } catch (error) {
+      console.error("Error in getting current user:", error);
+      throw new Error("Could not connect to server");
+    }
+  }
+
   static async addCompany(data) {
     try {
       const response = await axios.post(`${baseUrl}/createCompany`, data);
@@ -82,7 +99,7 @@ class Service {
       const formData = new FormData();
       // Append the file to the formData
       formData.append("file", file, file.name);
-      const response = await fetch(`${baseUrl}/upload-csv`, {
+      const response = await fetch(`${baseUrl}/upload/csv`, {
         method: "POST",
         body: formData,
       });

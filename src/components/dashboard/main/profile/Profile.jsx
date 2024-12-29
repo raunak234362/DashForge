@@ -1,14 +1,9 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
 
 const Profile = () => {
-  const [user, setUser] = useState({
-    username: "johndoe",
-    firstName: "John",
-    lastName: "Doe",
-    email: "johndoe@example.com",
-    profilePic: "https://w7.pngwing.com/pngs/340/956/png-transparent-profile-user-icon-computer-icons-user-profile-head-ico-miscellaneous-black-desktop-wallpaper-thumbnail.png", // Placeholder profile picture
-    password: "********", // Hidden password for display
-  });
+  const userData = useSelector((state) => state.user?.userData);
+  const [user, setUser] = useState(userData);
 
   const [isEditing, setIsEditing] = useState(false);
   const [formData, setFormData] = useState({ ...user });
@@ -70,13 +65,13 @@ const Profile = () => {
                 {isEditing ? (
                   <input
                     type="text"
-                    name="firstName"
-                    value={formData.firstName}
+                    name="f_name"
+                    value={formData.f_name}
                     onChange={handleInputChange}
                     className="w-full p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   />
                 ) : (
-                  <p className="text-gray-300">{user.firstName}</p>
+                  <p className="text-gray-300">{user.f_name}</p>
                 )}
               </div>
               <div>
@@ -84,13 +79,13 @@ const Profile = () => {
                 {isEditing ? (
                   <input
                     type="text"
-                    name="lastName"
-                    value={formData.lastName}
+                    name="l_name"
+                    value={formData.l_name}
                     onChange={handleInputChange}
                     className="w-full p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   />
                 ) : (
-                  <p className="text-gray-300">{user.lastName}</p>
+                  <p className="text-gray-300">{user.l_name}</p>
                 )}
               </div>
               <div>
@@ -99,26 +94,12 @@ const Profile = () => {
                   <input
                     type="email"
                     name="email"
-                    value={formData.email}
+                    value={formData.gmail}
                     onChange={handleInputChange}
                     className="w-full p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   />
                 ) : (
-                  <p className="text-gray-300">{user.email}</p>
-                )}
-              </div>
-              <div>
-                <label className="text-white font-bold">Password</label>
-                {isEditing ? (
-                  <input
-                    type="password"
-                    name="password"
-                    value={formData.password}
-                    onChange={handleInputChange}
-                    className="w-full p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                  />
-                ) : (
-                  <p className="text-gray-300">{user.password}</p>
+                  <p className="text-gray-300">{user.gmail}</p>
                 )}
               </div>
             </div>

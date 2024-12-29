@@ -15,7 +15,7 @@ class AuthService {
         throw new Error("Invalid Credentials");
       }
       console.log("Current User",response)
-      return response;
+      return response.data;
     } catch (error) {
       if (error.response && error.response.status === 400) {
         throw new Error("Invalid Credentials");
@@ -27,7 +27,7 @@ class AuthService {
   }
 
   static async register(data) {
-    console.log(data)
+    // console.log(data)
     try {
       const formData = { ...data };
       // console.log(formData)
@@ -36,6 +36,7 @@ class AuthService {
           "Content-Type": "application/json",
         },
       });
+      console.log(response)
       return response.data;
     } catch (error) {
       console.error("Error in register:", error);
