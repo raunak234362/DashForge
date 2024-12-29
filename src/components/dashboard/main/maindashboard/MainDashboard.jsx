@@ -3,6 +3,7 @@ import { Responsive, WidthProvider } from "react-grid-layout";
 
 import "react-grid-layout/css/styles.css";
 import "react-resizable/css/styles.css";
+import NumecValue from "./NumecValue";
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
@@ -36,7 +37,8 @@ const MainDashboard = () => {
   };
 
   return (
-    <div className="h-screen w-full overflow-auto p-4">
+    <div className="h-screen w-full  overflow-x-hidden p-4">
+      <NumecValue />
       <ResponsiveGridLayout
         className="layout"
         layouts={layouts}
