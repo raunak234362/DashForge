@@ -13,7 +13,6 @@ const Sidebar = () => {
   const token = sessionStorage.getItem("token");
   const [currentUser, setCurrentUser] = useState();
 
-
   const clearCookies = () => {
     const cookies = document.cookie.split("; ");
     for (const cookie of cookies) {
@@ -22,13 +21,13 @@ const Sidebar = () => {
       document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
     }
   };
-  
+
   const fetchLogout = async () => {
     try {
       clearCookies();
       // const response = await AuthService.logout(token);
-      
-    //   dispatch(logoutAction());
+
+      //   dispatch(logoutAction());
       navigate("/");
     } catch (error) {
       console.error("Logout failed:", error);
@@ -52,8 +51,9 @@ const Sidebar = () => {
 
   const userType = sessionStorage.getItem("userType");
   return (
-    <div className="flex flex-col justify-between h-full w-60 bg-white/30 md:border-2 text-black md:rounded-xl rounded-lg">
-      <nav className="p-5">
+    <div className="flex flex-col justify-between h-full w-60 bg-white/30 md:border-2 text-black">
+      <nav className="p-5 flex flex-col gap-10">
+        <h1 className="text-2xl font-bold text-gray-900 ">Dashforge</h1>
         <ul className="flex flex-col gap-5">
           <li>
             <NavLink

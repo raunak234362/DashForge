@@ -35,7 +35,7 @@ const Header = () => {
 
   return (
     <div className="w-full flex justify-center md:py-2">
-      <nav className="md:bg-transparent bg-gradient-to-t from-gray-700/50 to-blue-gray-800/50 text-lg shadow-md md:w-[95%] w-full md:rounded-xl md:top-2 z-50 overflow-x-hidden">
+      <nav className="md:bg-transparent bg-gradient-to-t from-gray-700 to-blue-gray-800 text-lg shadow-md md:w-[95%] w-full md:rounded-xl md:top-2 z-50 overflow-x-hidden">
         <div className="max-w-screen-xl mx-auto flex items-center justify-between px-4 py-3 md:px-6 lg:px-8">
           {/* Logo */}
           <div className="text-white font-bold">DashForge</div>

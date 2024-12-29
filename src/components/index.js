@@ -14,6 +14,8 @@ import Sidebar from "./dashboard/sidebar/Sidebar";
 import AddCSV from "./csv/CSV";
 import GenerateData from "./dashboard/main/datagenerate/GenerateData";
 import MainDashboard from "./dashboard/main/maindashboard/MainDashboard";
+import ShowAllCSV from "./dashboard/main/allCSV/ShowAllCSV";
+
 export {
   Layout,
   Button,
@@ -25,6 +27,7 @@ export {
   Signup,
   AuthLayout,
   AddCSV,
+  ShowAllCSV,
   MainDashboard,
   GenerateData,
 };
