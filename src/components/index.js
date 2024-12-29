@@ -14,6 +14,10 @@ import Sidebar from "./dashboard/sidebar/Sidebar";
 import AddCSV from "./csv/CSV";
 import GenerateData from "./dashboard/main/datagenerate/GenerateData";
 import MainDashboard from "./dashboard/main/maindashboard/MainDashboard";
+
+import BarChart from "./dashboard/main/graphs/BarChart";
+import LineChart from "./dashboard/main/graphs/LineChart";
+import PieChart from "./dashboard/main/graphs/PieChart";
 export {
   Layout,
   Button,
@@ -27,4 +31,7 @@ export {
   AddCSV,
   MainDashboard,
   GenerateData,
+  BarChart,
+  LineChart,
+  PieChart,
 };

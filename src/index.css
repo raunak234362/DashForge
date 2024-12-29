@@ -37,3 +37,11 @@
     border-radius: 20px;
   }
 }
+@layer components {
+  .react-resizable-handle {
+  color: #f1f1f1; /* Set all resize handles to blue */
+    border-radius: 50%; /* Make them circular */
+    width: 2rem;  /* Resize handle width */
+    height: 12px; /* Resize handle height */
+  }
+}
