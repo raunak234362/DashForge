@@ -8,7 +8,7 @@ console.log("API URL:", baseUrl);
 class Service {
   static async addCompany(data) {
     try {
-      const response = await axios.post(`${baseUrl}/createCompany`,data);
+      const response = await axios.post(`${baseUrl}/createCompany`, data);
       console.log("Response Data:", response.data);
       return response.data;
     } catch (error) {
@@ -86,8 +86,6 @@ class Service {
         method: "POST",
         body: formData, // Send the formData with the file
       });
-
-      console.log("Response object:", response);
       if (!response.ok) {
         // Handle unsuccessful responses
         console.error(`HTTP error! Status: ${response.status}`);

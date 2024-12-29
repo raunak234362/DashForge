@@ -39,7 +39,7 @@ const Sidebar = () => {
 
 
   useEffect(() => {
-    // fetchUserData();
+    // fetchLogout()
   }, []);
 
   const userType = sessionStorage.getItem("userType");
