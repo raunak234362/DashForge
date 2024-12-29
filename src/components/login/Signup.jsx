@@ -48,7 +48,7 @@ const Signup = () => {
               <BarChart3 className="w-8 h-8" />
             </div>
             <h1 className="text-2xl font-bold text-gray-900">DashForge</h1>
-            <p className="text-gray-800 mt-2">
+            <p className="text-gray-400 mt-2">
               Unlock Your Personalized Dashboard!
             </p>
           </div>
