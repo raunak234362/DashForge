@@ -17,16 +17,10 @@ const Signup = () => {
   const navigate = useNavigate();
 
   const onSubmit = async (data) => {
-    console.log("Data----",data)
     try {
       const response = AuthService.register(data);
-      console.log("signUpAttempt", response);
-      if (response.status === 200) {
-        toast.success("Sign up successful");
-        navigate("/dashboard");
-      } else {
-        console.log("Sign-up failed!");
-      }
+      toast.success("Sign up successful");
+      navigate("/login");
     } catch (error) {
       console.error("Error during sign-up:", error.errors);
       toast.error("Sign up failed. Please try again.");
@@ -63,7 +57,7 @@ const Signup = () => {
                   label="First Name:"
                   placeholder="First Name"
                   type="text"
-                  {...register("firstName", {
+                  {...register("f_name", {
                     required: "First name is required",
                   })}
                 />
@@ -76,7 +70,7 @@ const Signup = () => {
                   label="Last Name:"
                   placeholder="Last Name"
                   type="text"
-                  {...register("lastName")}
+                  {...register("l_name")}
                 />
               </div>
               <div>
@@ -84,7 +78,7 @@ const Signup = () => {
                   label="Mail ID:"
                   placeholder="Mail ID"
                   type="email"
-                  {...register("emailAddress", {
+                  {...register("gmail", {
                     required: "Email is required",
                   })}
                 />

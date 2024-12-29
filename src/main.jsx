@@ -4,10 +4,10 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { DashboardLayout, Data, GenerateData, Layout,Login, Signup, MainDashboard, RegisterCompany, ShowAllCompany, Profile } from "./components/index.js";
-import { ClerkProvider } from "@clerk/clerk-react";
-// import Login from "./components/authentication/Login.jsx";
-// import Signup from "./components/authentication/Signup.jsx";
+import { DashboardLayout, Data, GenerateData, Layout, MainDashboard, RegisterCompany, ShowAllCompany, Profile } from "./components/index.js";
+// import { ClerkProvider } from "@clerk/clerk-react";
+import Login from "./components/authentication/Login.jsx";
+import Signup from "./components/authentication/Signup.jsx";
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
@@ -71,8 +71,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/">
+    {/* <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/"> */}
       <RouterProvider router={router} />
-    </ClerkProvider>
+    {/* </ClerkProvider> */}
   </StrictMode>
 );
