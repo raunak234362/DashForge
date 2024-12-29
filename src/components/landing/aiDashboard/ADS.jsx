@@ -29,6 +29,7 @@ const ADS = () => {
     },
   ];
   return (
+    <>
     <section className=" mt-10 px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
@@ -59,6 +60,7 @@ const ADS = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 
