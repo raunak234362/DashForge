@@ -12,27 +12,27 @@ const MainDashboard = () => {
     lg: [
       { i: "bar", x: 0, y: 0, w: 6, h: 5 },
       { i: "line", x: 6, y: 0, w: 6, h: 5 },
-      { i: "pie", x: 0, y: 5, w: 6, h: 7 },
+      { i: "pie", x: 0, y: 5, w: 6, h: 5 },
     ],
     md: [
       { i: "bar", x: 0, y: 0, w: 5, h: 5 },
       { i: "line", x: 5, y: 0, w: 5, h: 5 },
-      { i: "pie", x: 0, y: 5, w: 5, h: 7 },
+      { i: "pie", x: 0, y: 5, w: 5, h: 6 },
     ],
     sm: [
       { i: "bar", x: 0, y: 0, w: 6, h: 5 },
       { i: "line", x: 0, y: 5, w: 6, h: 5 },
-      { i: "pie", x: 0, y: 10, w: 6, h: 7 },
+      { i: "pie", x: 0, y: 10, w: 6, h: 6 },
     ],
     xs: [
       { i: "bar", x: 0, y: 0, w: 4, h: 5 },
       { i: "line", x: 0, y: 5, w: 4, h: 5 },
-      { i: "pie", x: 0, y: 10, w: 4, h: 7 },
+      { i: "pie", x: 0, y: 10, w: 4, h: 6 },
     ],
     xxs: [
       { i: "bar", x: 0, y: 0, w: 2, h: 5 },
       { i: "line", x: 0, y: 5, w: 2, h: 5 },
-      { i: "pie", x: 0, y: 10, w: 2, h: 7 },
+      { i: "pie", x: 0, y: 10, w: 2, h: 6 },
     ],
   };
 
