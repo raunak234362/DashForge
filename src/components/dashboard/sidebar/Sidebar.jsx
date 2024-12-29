@@ -46,7 +46,9 @@ const Sidebar = () => {
   return (
     <div className="flex flex-col justify-between h-full w-60 bg-white/30 md:border-2 text-black">
       <nav className="p-5 flex flex-col gap-10">
-        <h1 className="text-2xl font-bold text-gray-900 ">Dashforge</h1>
+        <h1 className="text-2xl font-bold text-gray-900 cursor-pointer" onClick={() => navigate("/")}>
+          Dashforge 
+          </h1>
         <ul className="flex flex-col gap-5">
           <li>
             <NavLink

@@ -38,7 +38,7 @@ const Header = () => {
       <nav className=" bg-blue-gray-900 text-lg shadow-md md:w-[95%] w-full md:rounded-xl md:top-2 z-50 overflow-x-hidden">
         <div className="max-w-screen-xl mx-auto flex items-center justify-between py-3 md:px-6 lg:px-8">
           {/* Logo */}
-          <div className="text-white font-bold">DashForge</div>
+          <div className="text-white font-bold cursor-pointer"  onClick={() => navigate("/")}>DashForge</div>
 
           {/* Hamburger Menu (for small screens) */}
           <div className="md:hidden">
