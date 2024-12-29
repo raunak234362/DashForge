@@ -37,7 +37,6 @@ const AIForm = () => {
 
     await new Promise((resolve) => setTimeout(resolve, 2000));
 
-    setIsSubmitting(false);
   };
 
   return (
@@ -62,8 +61,8 @@ const AIForm = () => {
           />
         </div>
         <div className="flex w-full justify-center flex-row gap-10 mt-5">
-          <Button type="submit" disabled={isSubmitting}>
-            {isSubmitting ? "Registering..." : "Register Company"}
+          <Button type="submit">
+            Search
           </Button>
         </div>
       </form>
