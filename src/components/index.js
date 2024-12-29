@@ -18,6 +18,10 @@ import ShowAllCSV from "./dashboard/main/allCSV/ShowAllCSV";
 import ShowAllCompany from "./dashboard/main/datagenerate/ShowAllCompany";
 import RegisterCompany from "./dashboard/main/datagenerate/RegisterCompany";
 
+
+import BarChart from "./dashboard/main/graphs/BarChart";
+import LineChart from "./dashboard/main/graphs/LineChart";
+import PieChart from "./dashboard/main/graphs/PieChart";
 export {
   Layout,
   Button,
@@ -34,4 +38,7 @@ export {
   RegisterCompany,
   MainDashboard,
   GenerateData,
+  BarChart,
+  LineChart,
+  PieChart,
 };

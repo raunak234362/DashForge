@@ -37,3 +37,11 @@
     border-radius: 20px;
   }
 }
+
+.react-resizable-handle {
+  background-color: #26A69A; 
+  border-radius: 10%;
+  width: 15px !important;
+  height: 15px !important;
+  border-radius: 30%;
+}
