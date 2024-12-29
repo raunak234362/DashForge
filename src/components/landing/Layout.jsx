@@ -1,5 +1,6 @@
 import { useCallback, useState } from "react";
 import {Features, Footer, Header, Hero, HowItWorks} from "../index" 
+import { ADashboard } from "./aidash/ADashboard";
 // import { ADashboard } from "./aidashboard/ADashboard";
 
 const Layout = () => {
@@ -25,7 +26,7 @@ const Layout = () => {
           <HowItWorks />
         </div>
         <div>
-          {/* <ADashboard /> */}
+          <ADashboard />
         </div>
       </div>
       <div>
