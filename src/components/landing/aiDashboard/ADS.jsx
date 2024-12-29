@@ -1,30 +1,33 @@
 import { DashboardPreview } from "./DashboardPreview";
 import { FeatureCard } from "./FeatureCard";
 
-const features = [
-  {
-    title: "Natural Language Processing",
-    description: "Transform your dashboard requirements from plain English into powerful visualizations automatically.",
-    borderColor: "border-blue-500/20",
-  },
-  {
-    title: "Smart Layout Generation",
-    description: "AI analyzes your data structure and suggests optimal layouts and chart types for better visualization.",
-    borderColor: "border-purple-500/20",
-  },
-  {
-    title: "Automated Insights",
-    description: "Get AI-powered insights and anomaly detection from your data in real-time.",
-    borderColor: "border-gradient-to-r from-blue-500/20 to-purple-500/20",
-  },
-  {
-    title: "Predictive Analytics",
-    description: "Leverage machine learning models to forecast trends and predict future metrics.",
-    borderColor: "border-red-500/20",
-  },
-];
-
-const ADS= ()=> {
+const ADS = () => {
+  const features = [
+    {
+      title: "Natural Language Processing",
+      description:
+        "Transform your dashboard requirements from plain English into powerful visualizations automatically.",
+      borderColor: "border-blue-500/20",
+    },
+    {
+      title: "Smart Layout Generation",
+      description:
+        "AI analyzes your data structure and suggests optimal layouts and chart types for better visualization.",
+      borderColor: "border-purple-500/20",
+    },
+    {
+      title: "Automated Insights",
+      description:
+        "Get AI-powered insights and anomaly detection from your data in real-time.",
+      borderColor: "border-gradient-to-r from-blue-500/20 to-purple-500/20",
+    },
+    {
+      title: "Predictive Analytics",
+      description:
+        "Leverage machine learning models to forecast trends and predict future metrics.",
+      borderColor: "border-red-500/20",
+    },
+  ];
   return (
     <section className=" mt-10 px-8">
       <div className="max-w-7xl mx-auto">
@@ -33,7 +36,8 @@ const ADS= ()=> {
             AI-Powered Dashboard Creation
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Experience the power of artificial intelligence in creating stunning, functional dashboards tailored to your needs
+            Experience the power of artificial intelligence in creating
+            stunning, functional dashboards tailored to your needs
           </p>
         </div>
 
@@ -56,6 +60,6 @@ const ADS= ()=> {
       </div>
     </section>
   );
-}
+};
 
 export default ADS;
