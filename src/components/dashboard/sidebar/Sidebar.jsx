@@ -4,6 +4,10 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { Button } from "../../index";
+import { toast } from "react-toastify";
+import { BiSolidDashboard } from "react-icons/bi";
+import { FaBuilding, FaUser } from "react-icons/fa";
+import { BsFillClipboard2DataFill } from "react-icons/bs";
 
 // import AuthService from "../../../frappeConfig/AuthService";
 const Sidebar = () => {
@@ -25,9 +29,11 @@ const Sidebar = () => {
   const fetchLogout = async () => {
     try {
       clearCookies();
+      toast.success("Logged out successfully!");
       navigate("/login");
     } catch (error) {
       console.error("Logout failed:", error);
+      toast.error("Logout Failed")
     }
   };
 
@@ -40,7 +46,9 @@ const Sidebar = () => {
   return (
     <div className="flex flex-col justify-between h-full w-60 bg-white/30 md:border-2 text-black">
       <nav className="p-5 flex flex-col gap-10">
-        <h1 className="text-2xl font-bold text-gray-900 ">Dashforge</h1>
+        <h1 className="text-2xl font-bold text-gray-900 cursor-pointer" onClick={() => navigate("/")}>
+          Dashforge 
+          </h1>
         <ul className="flex flex-col gap-5">
           <li>
             <NavLink
@@ -52,7 +60,7 @@ const Sidebar = () => {
                   : "text-black hover:text-white hover:flex hover:justify-center py-2 hover:items-center hover:bg-teal-200 transition-all rounded-md"
               }
             >
-              <div>Dashboard</div>
+              <div className="flex gap-2 items-center"><BiSolidDashboard /> Dashboard</div>
             </NavLink>
           </li>
 
@@ -65,7 +73,7 @@ const Sidebar = () => {
                   : "text-black hover:text-white hover:flex hover:justify-center hover:items-center py-2 hover:bg-teal-200 transition-ease-in rounded-md"
               }
             >
-              <div>Company</div>
+              <div className="flex gap-2 items-center"><FaBuilding />Company</div>
             </NavLink>
           </li>
           <li className="w-full">
@@ -77,7 +85,7 @@ const Sidebar = () => {
                   : "text-black hover:text-white hover:flex hover:justify-center hover:items-center py-2 hover:bg-teal-200 transition-ease-in rounded-md"
               }
             >
-              <div>Generate Data</div>
+              <div className="flex gap-2 items-center"><BsFillClipboard2DataFill />Data</div>
             </NavLink>
           </li>
           <li className="w-full">
@@ -89,7 +97,7 @@ const Sidebar = () => {
                   : "text-black hover:text-white hover:flex hover:justify-center hover:items-center py-2 hover:bg-teal-200 transition-ease-in rounded-md"
               }
             >
-              <div>Profile</div>
+              <div className="flex gap-2 items-center"><FaUser />Profile</div>
             </NavLink>
           </li>
           <li></li>
