@@ -1,10 +1,5 @@
 import { useCallback, useState } from "react";
-import Header from "./header/Header";
-import Hero from "./hero/Hero";
-import Features from "./feature/Features";
-import { HowItWorks } from "./howItWorks/HowItWorks";
-import { AIDashboardSection } from "./aiDashboard/AiDashboardSection";
-import Footer from "./footer/Footer"
+import {ADS, Features, Footer, Header, Hero, HowItWorks} from "../index" 
 const Layout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -28,7 +23,7 @@ const Layout = () => {
           <HowItWorks />
         </div>
         <div>
-          <AIDashboardSection/>
+          <ADS/>
         </div>
       </div>
       <div>
