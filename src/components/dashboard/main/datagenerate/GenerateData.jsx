@@ -26,7 +26,12 @@ const GenerateData = () => {
   };
   return (
     <div>
-      <div className="h-[85vh] mt-2 overflow-y-auto">
+      <div className="h-[85vh] overflow-y-auto">
+      <div className="flex w-full my-5 justify-center items-center">
+            <div className="text-3xl font-bold text-white bg-cyan-500/50 shadow-xl px-5 py-1 mt-2 rounded-lg">
+              Company Data
+            </div>
+          </div>
         <div className={` rounded-lg bg-white/20 md:text-lg text-sm`}>
           <div className="overflow-auto rounded-lg bg-blue-gray-800 drop-shadow-md md:w-full w-full">
             <nav className="px-5 drop-shadow-md text-center">

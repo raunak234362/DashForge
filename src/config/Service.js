@@ -84,10 +84,9 @@ class Service {
       formData.append("file", file, file.name);
       const response = await fetch(`${baseUrl}/upload-csv`, {
         method: "POST",
-        body: formData, // Send the formData with the file
+        body: formData,
       });
       if (!response.ok) {
-        // Handle unsuccessful responses
         console.error(`HTTP error! Status: ${response.status}`);
         return;
       }

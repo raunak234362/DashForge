@@ -48,13 +48,7 @@ const AddCSV = () => {
           id="csv"
           required
           accept=".xls,.xlsx,.csv"
-          // onChange={async (e) => {
-          //   handleFileChange(e, "csv_upload");
-          //   await setFormData((prevState) => ({
-          //     ...prevState,
-          //     csv_upload: e?.target?.files,
-          //   }));
-          // }}
+          
           {...register("csv_file")}
         />
         <div className="flex flex-row gap-10 mt-5">

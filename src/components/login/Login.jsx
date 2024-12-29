@@ -26,7 +26,7 @@ const Login = () => {
   
     try {
       const signInAttempt = await signIn.create({
-        identifier,  // Using the correct identifier (emailAddress or username)
+        identifier,
         password,
       });
   

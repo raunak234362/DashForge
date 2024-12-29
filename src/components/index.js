@@ -17,6 +17,7 @@ import ShowAllCSV from "./dashboard/main/allCSV/ShowAllCSV";
 import ShowAllCompany from "./dashboard/main/datagenerate/ShowAllCompany";
 import RegisterCompany from "./dashboard/main/datagenerate/RegisterCompany";
 import Data from "./dashboard/main/dataImplementation/Data";
+import Profile from "./dashboard/main/profile/Profile"
 
 //landing
 import Hero from "./landing/hero/Hero";
@@ -36,6 +37,7 @@ export {
   Input,
   Select,
   Hero,
+  Profile,
   Features,
   Header,
   HowItWorks,

@@ -77,7 +77,7 @@ const Sidebar = () => {
                   : "text-black hover:text-white hover:flex hover:justify-center hover:items-center py-2 hover:bg-teal-200 transition-ease-in rounded-md"
               }
             >
-              <div>Data</div>
+              <div>Generate Data</div>
             </NavLink>
           </li>
           <li className="w-full">
