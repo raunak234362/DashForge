@@ -19,6 +19,15 @@ import ShowAllCompany from "./dashboard/main/datagenerate/ShowAllCompany";
 import RegisterCompany from "./dashboard/main/datagenerate/RegisterCompany";
 import Data from "./dashboard/main/dataImplementation/Data";
 
+//landing
+import Hero from "./landing/hero/Hero";
+import Features from "./landing/feature/Features";
+import HowItWorks from "./landing/howItWorks/HowItWorks";
+import ADS from "./landing/aidashboard/ADS";
+import Footer from "./landing/footer/Footer";
+import Header from "./landing/header/Header";
+
+
 import BarChart from "./dashboard/main/graphs/BarChart";
 import LineChart from "./dashboard/main/graphs/LineChart";
 import PieChart from "./dashboard/main/graphs/PieChart";
@@ -27,6 +36,12 @@ export {
   Button,
   Input,
   Select,
+  Hero,
+  Features,
+  Header,
+  HowItWorks,
+  ADS,
+  Footer,
   DashboardLayout,
   Sidebar,
   Login,

@@ -32,7 +32,7 @@ function ProgressBars() {
   );
 }
 
-export function HowItWorks() {
+const HowItWorks = ()=> {
   return (
     <section className="md:mt-0 mt-10 px-8">
       <div className="max-w-7xl mx-auto">
@@ -84,3 +84,5 @@ export function HowItWorks() {
     </section>
   );
 }
+
+export default HowItWorks;
