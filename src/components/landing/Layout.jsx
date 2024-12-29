@@ -17,7 +17,7 @@ const Layout = () => {
       <div className="w-full sticky top-0 z-50">
         <Header sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
       </div>
-      <div>
+      <div className="mt-5 md:mt-10 lg:mt-10">
         <div>
           <Hero />
         </div>

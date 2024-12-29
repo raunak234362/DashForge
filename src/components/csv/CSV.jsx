@@ -40,10 +40,11 @@ const AddCSV = () => {
   };
 
   return (
-    <div className="rounded-lg shadow-lg shadow-black/15 p-8 mt-8">
+    <div className="rounded-lg shadow-lg bg-white px-5 py-2 mt-8">
       <form onSubmit={handleSubmit(handleCSV)}>
         <input
           type="file"
+          label="CSV File"
           id="csv"
           required
           accept=".xls,.xlsx,.csv"
