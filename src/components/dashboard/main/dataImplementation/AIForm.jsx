@@ -40,7 +40,7 @@ const AIForm = () => {
   };
 
   return (
-    <section className="h-fit w-full rounded-md p-5">
+    <section className="h-fit w-full rounded-md p-5 bg-white/30">
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
         <div>
           <Select
