@@ -51,7 +51,7 @@ const Hero = () => {
             >
               <div className="text-2xl">{card.icon}</div>
               <div className="text-xl md:text-2xl">{card.title}</div>
-              <div className="text-base">{card.description}</div>
+              <div className="text-base md:text-md text-gray-400 font-light font-serif">{card.description}</div>
             </div>
           ))}
         </div>
