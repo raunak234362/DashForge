@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { BarChart3 } from "lucide-react";
 import { Input, Button, DashboardLayout } from "../index";
 import { useForm } from "react-hook-form";
