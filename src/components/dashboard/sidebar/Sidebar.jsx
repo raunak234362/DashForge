@@ -25,10 +25,7 @@ const Sidebar = () => {
   const fetchLogout = async () => {
     try {
       clearCookies();
-      // const response = await AuthService.logout(token);
-
-      //   dispatch(logoutAction());
-      navigate("/");
+      navigate("/login");
     } catch (error) {
       console.error("Logout failed:", error);
     }
