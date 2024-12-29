@@ -1,4 +1,3 @@
-import React from "react";
 import { PieChart, BarChart, LineChart } from "../../../index";
 import { Responsive, WidthProvider } from "react-grid-layout";
 

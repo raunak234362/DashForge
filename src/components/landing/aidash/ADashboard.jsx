@@ -1,7 +1,7 @@
 import { DashboardPreview } from "./DashboardPreview";
 import { FeatureCard } from "./FeatureCard";
 
-export const ADS = () => {
+export const ADashboard = () => {
   const features = [
     {
       title: "Natural Language Processing",
@@ -63,5 +63,3 @@ export const ADS = () => {
     </>
   );
 };
-
-// export default ADS;
