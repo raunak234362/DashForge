@@ -3,7 +3,7 @@ import Header from "./header/Header";
 import Hero from "./hero/Hero";
 import Features from "./feature/Features";
 import { HowItWorks } from "./howItWorks/HowItWorks";
-import { AIDashboardSection } from "./aiDashboard/AiDashboardSection";
+import { AIDashboardSection } from "./AiDashboard/AiDashboardSection";
 import Footer from "./footer/Footer"
 const Layout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
