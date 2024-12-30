@@ -18,7 +18,7 @@ const AIForm = () => {
     try {
       const response = await Service.fetchAllCompanies();
       const options = response.map((company) => ({
-        value: company.id, // or use company.name, based on your data
+        value: company.csvFileName, // or use company.name, based on your data
         label: company.companyName, // Display name of the company
       }));
       setCompanyOptions(options);
@@ -34,9 +34,8 @@ const AIForm = () => {
   const onSubmit = async (data) => {
     console.log(data);
     setIsSubmitting(true);
-
+    const response = await Service.fetchAI();
     await new Promise((resolve) => setTimeout(resolve, 2000));
-
   };
 
   return (
@@ -61,9 +60,7 @@ const AIForm = () => {
           />
         </div>
         <div className="flex w-full justify-center flex-row gap-10 mt-5">
-          <Button type="submit">
-            Generate
-          </Button>
+          <Button type="submit">Generate</Button>
         </div>
       </form>
     </section>

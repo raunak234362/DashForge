@@ -56,9 +56,9 @@ class Service {
     }
   }
 
-  static async fetchAI() {
+  static async fetchAI(data) {
     try {
-      const response = await axios.post(`${baseUrl}/parse-csv`);
+      const response = await axios.post(`${baseUrl}/csv`,data);
       console.log("Response Data:", response.data);
       return response.data;
     } catch (error) {
@@ -90,8 +90,9 @@ class Service {
     }
   }
 
-  static async csvUpload({ csv_file }) {
-    const file = csv_file[0];
+  static async csvUpload( csv_file ) {
+    console.log("CSV File:----------", csv_file);
+    const file = csv_file.csv_file[0];
     if (!file) {
       return;
     }
@@ -99,8 +100,10 @@ class Service {
       const formData = new FormData();
       // Append the file to the formData
       formData.append("file", file, file.name);
+      formData.append("organizationId", csv_file.organizationId);
+      console.log("Form Data:", formData);
       const response = await fetch(`${baseUrl}/upload/csv`, {
-        method: "POST",
+        method: "PUT",
         body: formData,
       });
       if (!response.ok) {
