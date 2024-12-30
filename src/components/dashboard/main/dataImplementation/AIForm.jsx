@@ -17,7 +17,7 @@ const AIForm = () => {
   } = useForm();
   const dispatch = useDispatch();
   const prompt =useSelector((state) => state.company?.generatePrompt?.data);
-  console.log(prompt);
+  
   const fetchAllCompany = async () => {
     try {
       const response = await Service.fetchAllCompanies();
@@ -39,7 +39,7 @@ const AIForm = () => {
     setIsSubmitting(true);
     const response = await Service.sendAI(data);
     dispatch(readPrompt(response));
-    console.log(response);
+    
     await new Promise((resolve) => setTimeout(resolve, 2000));
   };
 

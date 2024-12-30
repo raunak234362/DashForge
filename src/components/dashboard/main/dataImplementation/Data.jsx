@@ -1,5 +1,5 @@
 import AIForm from "./AIForm";
-import ResponseAI from "./ResponseAI";
+// import ResponseAI from "./ResponseAI";
 
 
 const Data = () => {

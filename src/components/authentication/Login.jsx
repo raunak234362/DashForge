@@ -18,7 +18,6 @@ const Login = () => {
   } = useForm();
 
   const user = useSelector((state) => state.user?.userData);
-  console.log("User Data", user);
   const dispatch = useDispatch();
 
   const navigate = useNavigate();
@@ -28,7 +27,6 @@ const Login = () => {
   const onSubmit = async (data) => {
     const session = await AuthService.login(data);
     if (session) {
-      console.log("Sign in successful!", session);
       sessionStorage.setItem("token", session.token);
       const userData = await Service.getCurrentUser(token);
       dispatch(setUserData(userData.data));
