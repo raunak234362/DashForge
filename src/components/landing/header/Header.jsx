@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
@@ -71,58 +72,8 @@ const Header = () => {
               isMenuOpen ? "block" : "hidden"
             }`}
           >
-            <ul className="flex flex-col md:bg-transparent md:flex-row bg-blue-gray-900 text-center md:space-x-16 md:text-base lg:text-lg">
-              {isLoggedIn && (
-                <li className="py-2 md:py-0">
-                  <NavLink
-                    to="/registerCompany"
-                    className={({ isActive }) =>
-                      isActive
-                    ? "block text-xl text-white transition-colors duration-200 tracking-wide bg-cyan-500 hover:bg-cyan-500/50 px-3 py-1 rounded-lg "  
-                    : "block text-xl text-white transition-colors duration-200 tracking-wide hover:bg-cyan-500/50 px-3 py-1 rounded-lg "
-                    }
-                    style={{
-                      textShadow: "2px 2px 2px #228EFD",
-                    }}
-                  >
-                    Register Company
-                  </NavLink>
-                </li>
-              )}
-              {isLoggedIn && (
-                <li className="py-2 md:py-0">
-                  <NavLink
-                    to="/profile"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "block text-xl text-white transition-colors duration-200 tracking-wide bg-cyan hover:bg-cyan-500/50 px-3 py-1 rounded-lg "
-                        : "block text-xl text-white transition-colors duration-200 tracking-wide hover:bg-cyan-500/50 px-3 py-1 rounded-lg "
-                    }
-                    style={{
-                      textShadow: "2px 2px 2px #228EFD",
-                    }}
-                  >
-                    Profile
-                  </NavLink>
-                </li>
-              )}
-              {isLoggedIn && (
-                <li className="py-2 md:py-0">
-                  <NavLink
-                    to="/dashboard"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "block text-xl text-white transition-colors duration-200 tracking-wide bg-cyan-500 hover:bg-cyan-500/50 px-3 py-1 rounded-lg "
-                        : "block text-xl text-white transition-colors duration-200 tracking-wide hover:bg-cyan-500/50 px-3 py-1 rounded-lg "
-                    }
-                    style={{
-                      textShadow: "2px 2px 2px #228EFD",
-                    }}
-                  >
-                    Dashboard
-                  </NavLink>
-                </li>
-              )}
+            <ul className="flex flex-col md:bg-transparent md:flex-row bg-blue-gray-900 text-center md:space-x-10 md:text-base lg:text-md">
+            
 
               <li className="py-2 md:py-0">
                 <NavLink
