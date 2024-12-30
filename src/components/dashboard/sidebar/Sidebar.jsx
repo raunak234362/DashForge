@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 // import LOGO from "../../../assets/logo.png";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
@@ -13,6 +13,11 @@ import { BsFillClipboard2DataFill } from "react-icons/bs";
 const Sidebar = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
+  const location = useLocation();
+  
+  // Check if the current path starts with `/company/` for highlighting
+  const isCompanyRoute = location.pathname.startsWith("/dashboard/company/")
 
   const token = sessionStorage.getItem("token");
   const [currentUser, setCurrentUser] = useState();
@@ -68,7 +73,7 @@ const Sidebar = () => {
             <NavLink
               to="company/company-list"
               className={({ isActive }) =>
-                isActive
+                isActive || isCompanyRoute
                   ? "flex justify-center items-center text-white bg-cyan-500/50 rounded-md w-full py-2 font-semibold  delay-150 transition-all ease-in-out"
                   : "text-black hover:text-white hover:flex hover:justify-center hover:items-center py-2 hover:bg-teal-200 transition-ease-in rounded-md"
               }

@@ -34,7 +34,7 @@ const company =useSelector((state) => state.company?.companyData);
             </tr>
         </thead>
         <tbody>
-            {company?.map((company) => (
+            { company && company?.map((company) => (
               <tr key={company._id} className="bg-teal-200/20">
                 <td className="border px-2 py-1">{company.companyName}</td>
                 <td className="border px-2 py-1">{company.typeOrganisation}</td>
