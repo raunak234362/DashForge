@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import { BarChart3 } from "lucide-react";
-import { Input, Button } from "../index";
+import { Input, Button, Header } from "../index";
 import { useForm } from "react-hook-form";
 // import { SignedIn, SignedOut, useSignIn } from "@clerk/clerk-react";
 import { Link, useNavigate } from "react-router-dom";
@@ -41,8 +41,9 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <div className="min-h-screen flex items-center justify-center p-4  bg-gradient-to-t from-black to-blue-gray-800">
+    <div className=" bg-gradient-to-t from-black to-blue-gray-800 min-h-screen">
+      <Header />
+      <div className=" flex items-center justify-center p-4 ">
         <div className="w-full md:w-1/2 border-gray-400 border-2 md:p-10 p-4 rounded-2xl bg-white/30">
           <div className="text-center mb-8">
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-400 text-white mb-4">

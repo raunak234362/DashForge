@@ -3,7 +3,7 @@ export function StepCard({ number, icon, title, description, children }) {
     return (
       <div className="relative">
         {/* Step Number and Icon */}
-        <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-4 z-50">
+        <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-4 z-20">
           {/* Step Number */}
           <div className="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center">
             <span className="text-xl font-bold text-white">{number}</span>

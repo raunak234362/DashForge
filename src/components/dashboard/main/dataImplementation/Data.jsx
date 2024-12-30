@@ -1,7 +1,9 @@
 import AIForm from "./AIForm";
+import ResponseAI from "./ResponseAI";
 
 
 const Data = () => {
+  
   return (
     <div>
       <div className="h-[85vh] overflow-y-auto">
@@ -10,8 +12,9 @@ const Data = () => {
               Generate Data
             </div>
           </div>
-        <div className="overflow-auto rounded-lg bg-blue-gray-800 drop-shadow-md md:w-full w-full">
+        <div className="overflow-auto rounded-lg space-y-5 bg-blue-gray-800 drop-shadow-md md:w-full w-full">
         <AIForm/>
+        <ResponseAI />
         </div>
       </div>
     </div>

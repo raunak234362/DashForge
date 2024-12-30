@@ -56,16 +56,32 @@ class Service {
     }
   }
 
-  static async fetchAI(data) {
+  static async sendAI(data) {
+    console.log(data.companyId)
     try {
-      const response = await axios.post(`${baseUrl}/csv`,data);
-      console.log("Response Data:", response.data);
+      const response = await axios.post(`${baseUrl}/organizations/${data.companyId}/analyze`,data,{
+        headers:{
+          'Content-Type': 'application/json',
+        }
+      });
+      console.log("Response Data:", response);
       return response.data;
     } catch (error) {
       console.error("Error fetching AI data", error);
       return null;
     }
   }
+  // static async fetchAI(data, companyId) {
+  //   console.log("Data:", companyId);
+  //   try {
+  //     const response = await axios.post(`${baseUrl}/organizations/:${companyId}/analyze`,data);
+  //     console.log("Response Data:", response.data);
+  //     return response.data;
+  //   } catch (error) {
+  //     console.error("Error fetching AI data", error);
+  //     return null;
+  //   }
+  // }
 
   static async fetchAllCSVData() {
     try {

@@ -32,8 +32,8 @@ const footerLinks = {
 
 const socialLinks = [
   { name: "Twitter", icon: Twitter, href: "#" },
-  { name: "GitHub", icon: Github, href: "#" },
-  { name: "LinkedIn", icon: Linkedin, href: "#" },
+  { name: "GitHub", icon: Github, href: "https://github.com/raunak234362/DashForge" },
+  { name: "LinkedIn", icon: Linkedin, href: "https://www.linkedin.com/in/raunakdeep-srivastava-28529b287/" },
 ];
 
 const Footer = ()=> {

@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   token: false,
   companyData: [],
+  generatePrompt: [],
 };
 
 const companySlice = createSlice({
@@ -20,9 +21,12 @@ const companySlice = createSlice({
         (company) => company._id !== action.payload
       );
     },
+    readPrompt: (state, action) => {
+      state.generatePrompt = action.payload;
+    },
   },
 });
 
-export const { addCompany, setCompanyData, deleteCompany } =
+export const { addCompany, setCompanyData, deleteCompany, readPrompt } =
   companySlice.actions;
 export default companySlice.reducer;

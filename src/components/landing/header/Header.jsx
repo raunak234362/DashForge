@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
@@ -70,7 +71,7 @@ const Header = () => {
               isMenuOpen ? "block" : "hidden"
             }`}
           >
-            <ul className="flex flex-col md:bg-transparent md:flex-row bg-blue-gray-900 text-center md:space-x-16 text-lg">
+            <ul className="flex flex-col md:bg-transparent md:flex-row bg-blue-gray-900 text-center md:space-x-16 md:text-base lg:text-lg">
               {isLoggedIn && (
                 <li className="py-2 md:py-0">
                   <NavLink

@@ -3,6 +3,8 @@ import { useForm } from "react-hook-form";
 import { Input, Button, Select } from "../../../index";
 import { useEffect, useState } from "react";
 import Service from "../../../../config/Service";
+import { useDispatch, useSelector } from "react-redux";
+import { readPrompt } from "../../../../store/companySlice";
 
 const AIForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -13,12 +15,14 @@ const AIForm = () => {
     formState: { errors },
     setValue,
   } = useForm();
-
+  const dispatch = useDispatch();
+  const prompt =useSelector((state) => state.company?.generatePrompt?.data);
+  console.log(prompt);
   const fetchAllCompany = async () => {
     try {
       const response = await Service.fetchAllCompanies();
       const options = response.map((company) => ({
-        value: company.csvFileName, // or use company.name, based on your data
+        value: company._id, // or use company.name, based on your data
         label: company.companyName, // Display name of the company
       }));
       setCompanyOptions(options);
@@ -32,9 +36,10 @@ const AIForm = () => {
   }, []);
 
   const onSubmit = async (data) => {
-    console.log(data);
     setIsSubmitting(true);
-    const response = await Service.fetchAI();
+    const response = await Service.sendAI(data);
+    dispatch(readPrompt(response));
+    console.log(response);
     await new Promise((resolve) => setTimeout(resolve, 2000));
   };
 
@@ -47,7 +52,7 @@ const AIForm = () => {
             placeholder="Select a Company"
             options={companyOptions}
             {...register("companyId")} // Field name to store the selected company's ID
-            onChange={(value) => setValue("companyId", value)} // React-hook-form integration
+            onChange={setValue}
           />
         </div>
 
