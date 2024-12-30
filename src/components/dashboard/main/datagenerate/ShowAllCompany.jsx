@@ -9,7 +9,7 @@ const[selectedCompany, setSelectedCompany] = useState(null);
 const[isModalOpen, setIsModalOpen] = useState(false);
 const company =useSelector((state) => state.company?.companyData);
 
-
+console.log(company);
 
   const handleViewClick = async (company) => {
     console.log(company)

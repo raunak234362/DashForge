@@ -32,6 +32,7 @@ const Login = () => {
       sessionStorage.setItem("token", session.token);
       const userData = await Service.getCurrentUser(token);
       dispatch(setUserData(userData.data));
+      // console.log("User Data", userData.data);
       toast.success("Sign up successful");
       navigate("/dashboard");
     } else {

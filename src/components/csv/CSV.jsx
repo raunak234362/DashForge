@@ -5,8 +5,14 @@ import { Button, Input } from "../index";
 import { useForm } from "react-hook-form";
 import Service from "../../config/Service";
 import { toast } from "react-toastify";
+import { useSelector } from "react-redux";
 
-const AddCSV = () => {
+const AddCSV = (company) => {
+  const companyID = company.company._id;
+  
+
+  console.log(companyID, 12, "csv.jsx");
+
   const [formData, setFormData] = useState("");
   const {
     register,
@@ -23,19 +29,24 @@ const AddCSV = () => {
       csv_upload: file,
     }));
   };
-
-  const handleCSV = async (csvData) => {
+  // console.log(companyID);
+  const handleCSV = async (csvData ) => {
+    console.log(csvData,"-------");
     try {
       if (!csvData) {
         console.error("No file selected");
         return;
       }
-      const data = await Service.csvUpload(csvData);
+      // console.log("id----------------", companyID);
+      
+      const updateData ={ ...csvData, organizationId: companyID};
+      console.log("Updated CSV with file----------",updateData);
+      const data = await Service.csvUpload(updateData);
       console.log(data);
       toast.success("Successfully added users from CSV");
       return data;
     } catch (error) {
-      console.error("Error adding users from CSV", error);
+      console.error("Error adding CSV", error);
     }
   };
 
@@ -44,17 +55,13 @@ const AddCSV = () => {
       <form onSubmit={handleSubmit(handleCSV)}>
         <input
           type="file"
-          label="CSV File"
           id="csv"
-          required
           accept=".xls,.xlsx,.csv"
-          
-          {...register("csv_file")}
+          className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          {...register("csv_file", { required: "Please select a CSV file" })}
         />
         <div className="flex flex-row gap-10 mt-5">
-          <Button type="submit" onClick={handleCSV}>
-            Upload
-          </Button>
+          <Button type="submit">Upload</Button>
         </div>
       </form>
     </div>

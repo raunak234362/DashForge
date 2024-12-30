@@ -50,7 +50,7 @@ const FetchCompany = ({ Company, onClose }) => {
 
         <div className="bg-blue-gray-800 p-5 m-3 rounded-lg">
           <div className="text-xl text-white font-bold">Add CSV Data</div>
-          <AddCSV className=""/>
+          <AddCSV company={Company}/>
         </div>
       </div>
     </div>

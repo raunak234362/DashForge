@@ -28,6 +28,7 @@ const Sidebar = () => {
 
   const fetchLogout = async () => {
     try {
+      sessionStorage.removeItem("token");
       clearCookies();
       toast.success("Logged out successfully!");
       navigate("/login");
@@ -66,7 +67,7 @@ const Sidebar = () => {
 
           <li className="w-full">
             <NavLink
-              to="company/company-list"
+              to="company"
               className={({ isActive }) =>
                 isActive
                   ? "flex justify-center items-center text-white bg-cyan-500/50 rounded-md w-full py-2 font-semibold  delay-150 transition-all ease-in-out"

@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   token: false,
-  companyData: {},
+  companyData: [],
 };
 
 const companySlice = createSlice({
